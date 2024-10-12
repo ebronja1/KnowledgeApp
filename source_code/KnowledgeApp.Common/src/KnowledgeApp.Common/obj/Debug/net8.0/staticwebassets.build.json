@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "dB7DdKyUzoUZBpJh5e5ex3VDWoLpsWHQgRWfyIyKNjE=",
+  "Source": "KnowledgeApp.Common",
+  "BasePath": "_content/KnowledgeApp.Common",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

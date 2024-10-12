@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "MSVu1P9+MWupwXpDrxkD6t8r0RZcZPHb3aVgx+LwdPg=",
+  "Source": "KnowledgeApp.Paragraph.Service",
+  "BasePath": "_content/KnowledgeApp.Paragraph.Service",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

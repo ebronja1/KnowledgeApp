@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KnowledgeApp.Common</id>
+    <version>1.0.2</version>
+    <authors>E B</authors>
+    <description>Common library for KnowledgeApp.</description>
+    <repository type="git" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="MassTransit" version="8.2.5" exclude="Build,Analyzers" />
+        <dependency id="MassTransit.RabbitMQ" version="8.2.5" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.Configuration.Binder" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="MongoDB.Driver" version="2.19.0" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\KnowledgeApp.Common.dll" target="lib\net8.0\KnowledgeApp.Common.dll" />
+  </files>
+</package>

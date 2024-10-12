@@ -1,0 +1,6 @@
+@KnowledgeApp.Paragraph.Service_HostAddress = http://localhost:5152
+
+GET {{KnowledgeApp.Paragraph.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
