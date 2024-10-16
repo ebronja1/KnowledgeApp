@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "KnowledgeApp.Paragraph.Contracts/1.0.0": {
+      "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
         "runtime": {
           "KnowledgeApp.Paragraph.Contracts.dll": {}
         }
@@ -14,7 +14,7 @@
     }
   },
   "libraries": {
-    "KnowledgeApp.Paragraph.Contracts/1.0.0": {
+    "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

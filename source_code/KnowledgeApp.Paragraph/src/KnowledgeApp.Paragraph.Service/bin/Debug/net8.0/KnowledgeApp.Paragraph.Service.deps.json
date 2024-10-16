@@ -9,7 +9,7 @@
       "KnowledgeApp.Paragraph.Service/1.0.0": {
         "dependencies": {
           "KnowledgeApp.Common": "1.0.2",
-          "KnowledgeApp.Paragraph.Contracts": "1.0.0",
+          "KnowledgeApp.Paragraph.Contracts": "1.0.1-alpha",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
@@ -434,7 +434,7 @@
           }
         }
       },
-      "KnowledgeApp.Paragraph.Contracts/1.0.0": {
+      "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
         "runtime": {
           "KnowledgeApp.Paragraph.Contracts.dll": {}
         }
@@ -811,7 +811,7 @@
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
     },
-    "KnowledgeApp.Paragraph.Contracts/1.0.0": {
+    "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

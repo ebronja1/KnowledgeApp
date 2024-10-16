@@ -5,9 +5,6 @@
     <Nullable>enable</Nullable>
     <IsPackable>true</IsPackable>
     <PackageId>KnowledgeApp.Common</PackageId>
-    <Version>1.0.2</Version> <!-- Adjust as necessary -->
-    <Authors>E B</Authors>
-    <Company>E B C</Company>
     <Description>Common library for KnowledgeApp.</Description>
   </PropertyGroup>
 

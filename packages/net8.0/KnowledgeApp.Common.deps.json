@@ -6,7 +6,7 @@
   "compilationOptions": {},
   "targets": {
     ".NETCoreApp,Version=v8.0": {
-      "KnowledgeApp.Common/1.0.2": {
+      "KnowledgeApp.Common/1.0.0": {
         "dependencies": {
           "MassTransit": "8.2.5",
           "MassTransit.RabbitMQ": "8.2.5",
@@ -357,7 +357,7 @@
     }
   },
   "libraries": {
-    "KnowledgeApp.Common/1.0.2": {
+    "KnowledgeApp.Common/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

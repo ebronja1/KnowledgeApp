@@ -9,3 +9,4 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\Knowle
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Contracts\obj\Debug\net8.0\refint\KnowledgeApp.Paragraph.Contracts.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Contracts\obj\Debug\net8.0\KnowledgeApp.Paragraph.Contracts.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Contracts\obj\Debug\net8.0\ref\KnowledgeApp.Paragraph.Contracts.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Contracts\obj\Debug\net8.0\KnowledgeApp.Paragraph.Contracts.sourcelink.json

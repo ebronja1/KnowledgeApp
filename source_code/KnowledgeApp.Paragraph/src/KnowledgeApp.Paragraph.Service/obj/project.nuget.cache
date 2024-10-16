@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "IWuY5tQpotk=",
+  "dgSpecHash": "OR3eU5tJeuo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Paragraph\\src\\KnowledgeApp.Paragraph.Service\\KnowledgeApp.Paragraph.Service.csproj",
   "expectedPackageFiles": [
@@ -55,7 +55,8 @@
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
+    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.paragraph.contracts\\1.0.1-alpha\\knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512"
   ],
   "logs": []
 }

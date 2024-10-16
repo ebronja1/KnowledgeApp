@@ -1,0 +1,6 @@
+@KnowledgeApp.LearningState.Service_HostAddress = http://localhost:5055
+
+GET {{KnowledgeApp.LearningState.Service_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

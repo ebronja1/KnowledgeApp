@@ -11,7 +11,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\": {}
   },
   "project": {
-    "version": "1.0.0",
+    "version": "1.0.1-alpha",
     "restore": {
       "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Paragraph\\src\\KnowledgeApp.Paragraph.Contracts\\KnowledgeApp.Paragraph.Contracts.csproj",
       "projectName": "KnowledgeApp.Paragraph.Contracts",

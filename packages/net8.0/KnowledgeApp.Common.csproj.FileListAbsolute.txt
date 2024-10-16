@@ -8,3 +8,4 @@ C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\refint\KnowledgeApp.Common.dl
 C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\KnowledgeApp.Common.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\KnowledgeApp.Common.deps.json
 C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\ref\KnowledgeApp.Common.dll
+C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\KnowledgeApp.Common.sourcelink.json

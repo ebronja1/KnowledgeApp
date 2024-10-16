@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using MassTransit;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -12,7 +13,7 @@ namespace KnowledgeApp.Common.MassTransit
         {
             services.AddMassTransit(configure =>
             {
-                configure.AddConsumers(typeof(Extensions).Assembly);
+                configure.AddConsumers(Assembly.GetEntryAssembly());
 
                 configure.UsingRabbitMq((context, configurator) =>
                 {

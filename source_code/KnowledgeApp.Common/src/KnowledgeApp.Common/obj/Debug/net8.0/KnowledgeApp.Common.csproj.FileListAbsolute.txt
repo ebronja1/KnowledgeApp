@@ -6,15 +6,8 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\Knowledge
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\bin\Debug\net8.0\KnowledgeApp.Common.deps.json
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\bin\Debug\net8.0\KnowledgeApp.Common.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\bin\Debug\net8.0\KnowledgeApp.Common.pdb
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets.build.json
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets.development.json
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets\msbuild.KnowledgeApp.Common.Microsoft.AspNetCore.StaticWebAssets.props
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets\msbuild.build.KnowledgeApp.Common.props
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.KnowledgeApp.Common.props
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.KnowledgeApp.Common.props
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\scopedcss\bundle\KnowledgeApp.Common.styles.css
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\KnowledgeApp.Common.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\refint\KnowledgeApp.Common.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\KnowledgeApp.Common.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\ref\KnowledgeApp.Common.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Common\src\KnowledgeApp.Common\obj\Debug\net8.0\KnowledgeApp.Common.sourcelink.json

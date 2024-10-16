@@ -59,3 +59,4 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\Knowle
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Service\obj\Debug\net8.0\KnowledgeApp.Paragraph.Service.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Service\obj\Debug\net8.0\KnowledgeApp.Paragraph.Service.genruntimeconfig.cache
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Service\obj\Debug\net8.0\ref\KnowledgeApp.Paragraph.Service.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Paragraph\src\KnowledgeApp.Paragraph.Service\obj\Debug\net8.0\KnowledgeApp.Paragraph.Service.sourcelink.json

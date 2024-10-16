@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj": {
-      "version": "1.0.2",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj",
         "projectName": "KnowledgeApp.Common",
@@ -14,6 +14,7 @@
         "outputPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
+          "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\NuGet.Config",
           "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -23,6 +24,7 @@
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "C:\\Program Files\\dotnet\\library-packs": {},
+          "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\packages": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
