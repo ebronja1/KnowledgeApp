@@ -5,9 +5,9 @@ namespace KnowledgeApp.LearningState.Service
 {
     public static class Extensions
     {
-        public static AssignLearningStateDto AsDto(this LearningStateModel learningStateModel, int chapterNumber, int paragraphNumber, Guid userId)
+        public static AssignLearningStateDto AsDto(this LearningStateModel learningStateModel, int chapterNumber, int paragraphNumber)
         {
-            return new AssignLearningStateDto(learningStateModel.ParagraphId, learningStateModel.Type, chapterNumber, paragraphNumber, userId);
+            return new AssignLearningStateDto(learningStateModel.ParagraphId, learningStateModel.Type, chapterNumber, paragraphNumber);
         }
     }
 }

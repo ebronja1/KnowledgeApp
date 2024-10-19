@@ -49,7 +49,7 @@ namespace KnowledgeApp.LearningState.Service.Controllers
                     {
                         return null;
                     }
-                    return learningState.AsDto(paragraph.ChapterNumber, paragraph.ParagraphNumber, userId);
+                    return learningState.AsDto(paragraph.ChapterNumber, paragraph.ParagraphNumber);
                 })
                 .Where(dto => dto != null);
 
@@ -58,28 +58,36 @@ namespace KnowledgeApp.LearningState.Service.Controllers
 
 
 
-        [HttpPost]
-        public async Task<ActionResult> PostAsync([FromBody] AssignLearningStateDto assignLearningStateDto)
+        [HttpPost("{userId:guid}")]
+        public async Task<ActionResult> PostAsync([FromRoute] Guid userId, [FromBody] AssignLearningStateDto assignLearningStateDto)
         {
+            var inputedUserId = userId;
             if (assignLearningStateDto == null)
             {
                 return BadRequest("Invalid learning state data.");
             }
 
             var existingLearningState = await _learningStateRepository.GetAsync(
-                state => state.UserId == assignLearningStateDto.UserId && state.ParagraphId == assignLearningStateDto.ParagraphId);
+                state => state.UserId == inputedUserId && state.ParagraphId == assignLearningStateDto.ParagraphId);
 
             if (existingLearningState == null)
             {
                 var newLearningState = new LearningStateModel
                 {
-                    UserId = assignLearningStateDto.UserId,
+                    UserId = inputedUserId,
                     ParagraphId = assignLearningStateDto.ParagraphId,
                     Type = assignLearningStateDto.Type,
                 };
 
                 await _learningStateRepository.CreateAsync(newLearningState);
-                return CreatedAtAction(nameof(GetAsync), new { userId = newLearningState.UserId }, newLearningState);
+                return CreatedAtAction(
+                    actionName: nameof(GetAsync), // The action name for the GetAsync method
+                    controllerName: "LearningState", // The controller name without "Controller" suffix
+                    routeValues: new { userId = inputedUserId, paragraphId = newLearningState.ParagraphId }, // Matching route values
+                    value: newLearningState // Response body
+                );
+
+
             }
             else
             {
@@ -87,6 +95,20 @@ namespace KnowledgeApp.LearningState.Service.Controllers
                 await _learningStateRepository.UpdateAsync(existingLearningState);
                 return NoContent(); // Indicating that the update was successful
             }
+        }
+
+        [HttpGet("{userId:guid}/{paragraphId:guid}")]
+        public async Task<ActionResult<LearningStateModel>> GetAsync(Guid userId, Guid paragraphId)
+        {
+            var learningState = await _learningStateRepository.GetAsync(
+                state => state.UserId == userId && state.ParagraphId == paragraphId);
+
+            if (learningState == null)
+            {
+                return NotFound();
+            }
+
+            return learningState;
         }
     }
 }
