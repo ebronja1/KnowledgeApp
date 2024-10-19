@@ -62,3 +62,4 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.LearningState\src\Kn
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.LearningState\src\KnowledgeApp.LearningState.Service\obj\Debug\net8.0\KnowledgeApp.LearningState.Service.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.LearningState\src\KnowledgeApp.LearningState.Service\obj\Debug\net8.0\KnowledgeApp.LearningState.Service.genruntimeconfig.cache
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.LearningState\src\KnowledgeApp.LearningState.Service\obj\Debug\net8.0\ref\KnowledgeApp.LearningState.Service.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.LearningState\src\KnowledgeApp.LearningState.Service\bin\Debug\net8.0\KnowledgeApp.User.Contracts.dll

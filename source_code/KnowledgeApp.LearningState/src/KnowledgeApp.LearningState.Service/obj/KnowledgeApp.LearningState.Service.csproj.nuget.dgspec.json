@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[1.0.1-alpha, )"
             },
+            "KnowledgeApp.User.Contracts": {
+              "target": "Package",
+              "version": "[1.0.2, )"
+            },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
               "version": "[8.0.2, )"

@@ -18,6 +18,7 @@ var configuration = builder.Configuration;
 builder.Services.AddMongo()
                 .AddMongoRepository<LearningStateModel>("learning-states")
                 .AddMongoRepository<ParagraphModel>("paragraphs")
+                .AddMongoRepository<UserModel>("users")
                 .AddMassTransitWithRabbitMq();
 
 AddParagraphClient(builder.Services, configuration);

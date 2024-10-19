@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "fKn++w2ywKg=",
+  "dgSpecHash": "wyWhhebFvwg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.LearningState\\src\\KnowledgeApp.LearningState.Service\\KnowledgeApp.LearningState.Service.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.3\\knowledgeapp.common.1.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.paragraph.contracts\\1.0.1-alpha\\knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.0.2\\knowledgeapp.user.contracts.1.0.2.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit\\8.2.5\\masstransit.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.abstractions\\8.2.5\\masstransit.abstractions.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.rabbitmq\\8.2.5\\masstransit.rabbitmq.8.2.5.nupkg.sha512",

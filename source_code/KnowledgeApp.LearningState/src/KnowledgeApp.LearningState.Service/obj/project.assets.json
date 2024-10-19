@@ -73,6 +73,15 @@
           "lib/net8.0/KnowledgeApp.Paragraph.Contracts.dll": {}
         }
       },
+      "KnowledgeApp.User.Contracts/1.0.2": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/KnowledgeApp.User.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/KnowledgeApp.User.Contracts.dll": {}
+        }
+      },
       "MassTransit/8.2.5": {
         "type": "package",
         "dependencies": {
@@ -972,6 +981,17 @@
         "knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512",
         "knowledgeapp.paragraph.contracts.nuspec",
         "lib/net8.0/KnowledgeApp.Paragraph.Contracts.dll"
+      ]
+    },
+    "KnowledgeApp.User.Contracts/1.0.2": {
+      "sha512": "jQmvR6aubmojqlS8gQsuaYxlsaW/KYrdk8+HlgyTm9Qk++Q3SqCcOBzq7Ii5KzBM1XUjW0qU5s4N1XJLTn+3zA==",
+      "type": "package",
+      "path": "knowledgeapp.user.contracts/1.0.2",
+      "files": [
+        ".nupkg.metadata",
+        "knowledgeapp.user.contracts.1.0.2.nupkg.sha512",
+        "knowledgeapp.user.contracts.nuspec",
+        "lib/net8.0/KnowledgeApp.User.Contracts.dll"
       ]
     },
     "MassTransit/8.2.5": {
@@ -2439,6 +2459,7 @@
     "net8.0": [
       "KnowledgeApp.Common >= 1.0.3",
       "KnowledgeApp.Paragraph.Contracts >= 1.0.1-alpha",
+      "KnowledgeApp.User.Contracts >= 1.0.2",
       "Microsoft.AspNetCore.OpenApi >= 8.0.2",
       "Microsoft.Extensions.Http.Polly >= 8.0.10",
       "Swashbuckle.AspNetCore >= 6.4.0"
@@ -2498,6 +2519,10 @@
           "KnowledgeApp.Paragraph.Contracts": {
             "target": "Package",
             "version": "[1.0.1-alpha, )"
+          },
+          "KnowledgeApp.User.Contracts": {
+            "target": "Package",
+            "version": "[1.0.2, )"
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
