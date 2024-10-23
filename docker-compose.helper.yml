@@ -5,20 +5,43 @@ services:
     image: mongo
     container_name: mongo
     ports:
-      - 27017:27017
+      - "27017:27017" # Ensure this port mapping is correct
     volumes: 
       - mongodbdata:/data/db
+    networks:
+      - my-network
 
   rabbitmq:
     image: rabbitmq:management
     container_name: rabbitmq
     ports: 
-      - 5672:5672
-      - 15672:15672
+      - "5672:5672"
+      - "15672:15672"
     volumes:
       - rabbitmqdata:/var/lib/rabbitmq
-    hostname: rabbitmq
+    networks:
+      - my-network
+
+  user-service:
+    build:
+      context: .
+      dockerfile: ./source_code/KnowledgeApp.User/src/KnowledgeApp.User.Service/Dockerfile
+    container_name: user-service
+    ports:
+      - "5000:8080" # Expose your app's port properly
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://mongo:27017 # Use service name for MongoDB
+    depends_on:
+      - mongo
+      - rabbitmq
+    networks:
+      - my-network
 
 volumes: 
   mongodbdata:
   rabbitmqdata:
+
+networks:
+  my-network:

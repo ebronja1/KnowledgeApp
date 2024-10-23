@@ -6,7 +6,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "paragraph-service",  
-          "Port": 80                  
+          "Port": 8080                  
         }
       ],
       "UpstreamPathTemplate": "/paragraphs/{everything}",
@@ -18,7 +18,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "user-service",      
-          "Port": 80                   
+          "Port": 8080                   
         }
       ],
       "UpstreamPathTemplate": "/users/{everything}",
@@ -30,7 +30,7 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "learning-state-service",  
-          "Port": 80                     
+          "Port": 8080                     
         }
       ],
       "UpstreamPathTemplate": "/learning-states/{everything}",
