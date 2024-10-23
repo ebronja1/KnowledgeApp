@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "9o65sebBrnA=",
+  "dgSpecHash": "bvYFwA3dLUg=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emir\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.2\\knowledgeapp.common.1.0.2.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.3\\knowledgeapp.common.1.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit\\8.2.5\\masstransit.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.abstractions\\8.2.5\\masstransit.abstractions.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.rabbitmq\\8.2.5\\masstransit.rabbitmq.8.2.5.nupkg.sha512",
@@ -55,7 +55,8 @@
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
+    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.0.2\\knowledgeapp.user.contracts.1.0.2.nupkg.sha512"
   ],
   "logs": []
 }

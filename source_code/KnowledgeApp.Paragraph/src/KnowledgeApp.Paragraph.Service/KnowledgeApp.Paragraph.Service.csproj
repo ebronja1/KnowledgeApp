@@ -8,15 +8,12 @@
 
   <ItemGroup>
     <!-- Updating package versions to the latest stable versions compatible with .NET 8 -->
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="8.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Authentication.OpenIdConnect" Version="8.0.0" />
-    <PackageReference Include="KnowledgeApp.Common" Version="1.0.2" /> <!-- Keep this as is unless an update is needed -->
+    <PackageReference Include="KnowledgeApp.Common" Version="1.0.3" /> <!-- Keep this as is unless an update is needed -->
+    <PackageReference Include="KnowledgeApp.Paragraph.Contracts" Version="1.0.1-alpha" /> <!-- Keep this as is unless an update is needed -->
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.5.0" /> <!-- Latest stable version -->
   </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\KnowledgeApp.Paragraph.Contracts\KnowledgeApp.Paragraph.Contracts.csproj" />
-  </ItemGroup>
-
 </Project>
 

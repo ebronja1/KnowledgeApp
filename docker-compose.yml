@@ -19,6 +19,59 @@ services:
       - rabbitmqdata:/var/lib/rabbitmq
     hostname: rabbitmq
 
+  learning-state-service:
+    build:
+      context: .
+      dockerfile: ./source_code/KnowledgeApp.LearningState/src/KnowledgeApp.LearningState.Service/Dockerfile
+    container_name: learning-state-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
+    depends_on:
+      - mongo
+      - rabbitmq
+
+  paragraph-service:
+    build:
+      context: .
+      dockerfile: ./source_code/KnowledgeApp.Paragraph/src/KnowledgeApp.Paragraph.Service/Dockerfile
+    container_name: paragraph-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
+    depends_on:
+      - mongo
+      - rabbitmq
+
+  user-service:
+    build:
+      context: .
+      dockerfile: ./source_code/KnowledgeApp.User/src/KnowledgeApp.User.Service/Dockerfile
+    container_name: user-service
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - RABBITMQ_HOST=rabbitmq
+      - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
+    depends_on:
+      - mongo
+      - rabbitmq
+
+  api-gateway:
+    build:
+      context: .
+      dockerfile: ./source_code/KnowledgeApp.ApiGateway/src/KnowledgeApp.ApiGateway/Dockerfile
+    container_name: api-gateway-service
+    ports:
+      - 5000:80
+    volumes:
+      - ./source_code/KnowledgeApp.ApiGateway/src/KnowledgeApp.ApiGateway/ocelot.json:/app/Ocelot.json
+    depends_on:
+      - learning-state-service
+      - paragraph-service
+      - user-service
+
 volumes: 
   mongodbdata:
   rabbitmqdata:

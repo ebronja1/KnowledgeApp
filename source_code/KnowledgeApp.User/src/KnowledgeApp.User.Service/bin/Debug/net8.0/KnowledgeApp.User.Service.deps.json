@@ -8,8 +8,8 @@
     ".NETCoreApp,Version=v8.0": {
       "KnowledgeApp.User.Service/1.0.0": {
         "dependencies": {
-          "KnowledgeApp.Common": "1.0.2",
-          "KnowledgeApp.User.Contracts": "1.0.0",
+          "KnowledgeApp.Common": "1.0.3",
+          "KnowledgeApp.User.Contracts": "1.0.2",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.0",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.0",
           "Swashbuckle.AspNetCore": "6.5.0"
@@ -48,7 +48,7 @@
           }
         }
       },
-      "KnowledgeApp.Common/1.0.2": {
+      "KnowledgeApp.Common/1.0.3": {
         "dependencies": {
           "MassTransit": "8.2.5",
           "MassTransit.RabbitMQ": "8.2.5",
@@ -59,8 +59,8 @@
         },
         "runtime": {
           "lib/net8.0/KnowledgeApp.Common.dll": {
-            "assemblyVersion": "1.0.2.0",
-            "fileVersion": "1.0.2.0"
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
           }
         }
       },
@@ -434,7 +434,7 @@
           }
         }
       },
-      "KnowledgeApp.User.Contracts/1.0.0": {
+      "KnowledgeApp.User.Contracts/1.0.2": {
         "runtime": {
           "KnowledgeApp.User.Contracts.dll": {}
         }
@@ -468,12 +468,12 @@
       "path": "dnsclient/1.6.1",
       "hashPath": "dnsclient.1.6.1.nupkg.sha512"
     },
-    "KnowledgeApp.Common/1.0.2": {
+    "KnowledgeApp.Common/1.0.3": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-OM0pMluyR+HqHsnt4z554jiGWWFByyielLsRjRg9z7GuEWLCPOX54sHYduxKo1V6p0T3jJ/+mTsyAG187/pypg==",
-      "path": "knowledgeapp.common/1.0.2",
-      "hashPath": "knowledgeapp.common.1.0.2.nupkg.sha512"
+      "sha512": "sha512-OQK3MLnXP6ja4S/esqk9hWKyugbfdxwlweFG9yXiZihCaTC6gj7/bMeXd5bUtvz6lwIYa/VBmVYupJioFwnQrw==",
+      "path": "knowledgeapp.common/1.0.3",
+      "hashPath": "knowledgeapp.common.1.0.3.nupkg.sha512"
     },
     "MassTransit/8.2.5": {
       "type": "package",
@@ -811,7 +811,7 @@
       "path": "zstdsharp.port/0.6.2",
       "hashPath": "zstdsharp.port.0.6.2.nupkg.sha512"
     },
-    "KnowledgeApp.User.Contracts/1.0.0": {
+    "KnowledgeApp.User.Contracts/1.0.2": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -47,7 +47,7 @@
           }
         }
       },
-      "KnowledgeApp.Common/1.0.2": {
+      "KnowledgeApp.Common/1.0.3": {
         "type": "package",
         "dependencies": {
           "MassTransit": "8.2.5",
@@ -62,6 +62,15 @@
         },
         "runtime": {
           "lib/net8.0/KnowledgeApp.Common.dll": {}
+        }
+      },
+      "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/KnowledgeApp.Paragraph.Contracts.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/KnowledgeApp.Paragraph.Contracts.dll": {}
         }
       },
       "MassTransit/8.2.5": {
@@ -146,6 +155,25 @@
         },
         "runtime": {
           "lib/net8.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.dll": {
+            "related": ".xml"
+          }
+        },
+        "frameworkReferences": [
+          "Microsoft.AspNetCore.App"
+        ]
+      },
+      "Microsoft.AspNetCore.OpenApi/8.0.0": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.OpenApi": "1.4.3"
+        },
+        "compile": {
+          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
+            "related": ".xml"
+          }
+        },
+        "runtime": {
+          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
             "related": ".xml"
           }
         },
@@ -511,7 +539,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "Microsoft.OpenApi/1.2.3": {
+      "Microsoft.OpenApi/1.4.3": {
         "type": "package",
         "compile": {
           "lib/netstandard2.0/Microsoft.OpenApi.dll": {
@@ -875,16 +903,6 @@
         "runtime": {
           "lib/net6.0/ZstdSharp.dll": {}
         }
-      },
-      "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
-        "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
-        "compile": {
-          "bin/placeholder/KnowledgeApp.Paragraph.Contracts.dll": {}
-        },
-        "runtime": {
-          "bin/placeholder/KnowledgeApp.Paragraph.Contracts.dll": {}
-        }
       }
     }
   },
@@ -965,15 +983,26 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
-    "KnowledgeApp.Common/1.0.2": {
-      "sha512": "OM0pMluyR+HqHsnt4z554jiGWWFByyielLsRjRg9z7GuEWLCPOX54sHYduxKo1V6p0T3jJ/+mTsyAG187/pypg==",
+    "KnowledgeApp.Common/1.0.3": {
+      "sha512": "OQK3MLnXP6ja4S/esqk9hWKyugbfdxwlweFG9yXiZihCaTC6gj7/bMeXd5bUtvz6lwIYa/VBmVYupJioFwnQrw==",
       "type": "package",
-      "path": "knowledgeapp.common/1.0.2",
+      "path": "knowledgeapp.common/1.0.3",
       "files": [
         ".nupkg.metadata",
-        "knowledgeapp.common.1.0.2.nupkg.sha512",
+        "knowledgeapp.common.1.0.3.nupkg.sha512",
         "knowledgeapp.common.nuspec",
         "lib/net8.0/KnowledgeApp.Common.dll"
+      ]
+    },
+    "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
+      "sha512": "hlZuvIHblVR7c//FkkgCNzyThgrigme65Dc8hqc++Qwse7KgjXbF+197cT2USfv3w+HhHoiNtmS1RdkdcyqRpg==",
+      "type": "package",
+      "path": "knowledgeapp.paragraph.contracts/1.0.1-alpha",
+      "files": [
+        ".nupkg.metadata",
+        "knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512",
+        "knowledgeapp.paragraph.contracts.nuspec",
+        "lib/net8.0/KnowledgeApp.Paragraph.Contracts.dll"
       ]
     },
     "MassTransit/8.2.5": {
@@ -1067,6 +1096,21 @@
         "lib/net8.0/Microsoft.AspNetCore.Authentication.OpenIdConnect.xml",
         "microsoft.aspnetcore.authentication.openidconnect.8.0.0.nupkg.sha512",
         "microsoft.aspnetcore.authentication.openidconnect.nuspec"
+      ]
+    },
+    "Microsoft.AspNetCore.OpenApi/8.0.0": {
+      "sha512": "T4mwMvPSOYAp+KeQ4xO8H2rxpiOMJ9W/7yBBkUTMp96AHtGlPN4s7hbax2tM61LxTY775JKL4fiv5grn41EHXw==",
+      "type": "package",
+      "path": "microsoft.aspnetcore.openapi/8.0.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "Icon.png",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net8.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
+        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/6.0.5": {
@@ -1898,20 +1942,17 @@
         "version.txt"
       ]
     },
-    "Microsoft.OpenApi/1.2.3": {
-      "sha512": "Nug3rO+7Kl5/SBAadzSMAVgqDlfGjJZ0GenQrLywJ84XGKO0uRqkunz5Wyl0SDwcR71bAATXvSdbdzPrYRYKGw==",
+    "Microsoft.OpenApi/1.4.3": {
+      "sha512": "rURwggB+QZYcSVbDr7HSdhw/FELvMlriW10OeOzjPT7pstefMo7IThhtNtDudxbXhW+lj0NfX72Ka5EDsG8x6w==",
       "type": "package",
-      "path": "microsoft.openapi/1.2.3",
+      "path": "microsoft.openapi/1.4.3",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
-        "lib/net46/Microsoft.OpenApi.dll",
-        "lib/net46/Microsoft.OpenApi.pdb",
-        "lib/net46/Microsoft.OpenApi.xml",
         "lib/netstandard2.0/Microsoft.OpenApi.dll",
         "lib/netstandard2.0/Microsoft.OpenApi.pdb",
         "lib/netstandard2.0/Microsoft.OpenApi.xml",
-        "microsoft.openapi.1.2.3.nupkg.sha512",
+        "microsoft.openapi.1.4.3.nupkg.sha512",
         "microsoft.openapi.nuspec"
       ]
     },
@@ -2476,19 +2517,15 @@
         "zstdsharp.port.0.6.2.nupkg.sha512",
         "zstdsharp.port.nuspec"
       ]
-    },
-    "KnowledgeApp.Paragraph.Contracts/1.0.1-alpha": {
-      "type": "project",
-      "path": "../KnowledgeApp.Paragraph.Contracts/KnowledgeApp.Paragraph.Contracts.csproj",
-      "msbuildProject": "../KnowledgeApp.Paragraph.Contracts/KnowledgeApp.Paragraph.Contracts.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "KnowledgeApp.Common >= 1.0.2",
+      "KnowledgeApp.Common >= 1.0.3",
       "KnowledgeApp.Paragraph.Contracts >= 1.0.1-alpha",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 8.0.0",
+      "Microsoft.AspNetCore.OpenApi >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
@@ -2521,11 +2558,7 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "projectReferences": {
-            "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Paragraph\\src\\KnowledgeApp.Paragraph.Contracts\\KnowledgeApp.Paragraph.Contracts.csproj": {
-              "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Paragraph\\src\\KnowledgeApp.Paragraph.Contracts\\KnowledgeApp.Paragraph.Contracts.csproj"
-            }
-          }
+          "projectReferences": {}
         }
       },
       "warningProperties": {
@@ -2545,13 +2578,21 @@
         "dependencies": {
           "KnowledgeApp.Common": {
             "target": "Package",
-            "version": "[1.0.2, )"
+            "version": "[1.0.3, )"
+          },
+          "KnowledgeApp.Paragraph.Contracts": {
+            "target": "Package",
+            "version": "[1.0.1-alpha, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",
             "version": "[8.0.0, )"
           },
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
+            "target": "Package",
+            "version": "[8.0.0, )"
+          },
+          "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
             "version": "[8.0.0, )"
           },

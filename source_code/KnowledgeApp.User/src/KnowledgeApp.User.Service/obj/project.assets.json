@@ -47,7 +47,7 @@
           }
         }
       },
-      "KnowledgeApp.Common/1.0.2": {
+      "KnowledgeApp.Common/1.0.3": {
         "type": "package",
         "dependencies": {
           "MassTransit": "8.2.5",
@@ -876,7 +876,7 @@
           "lib/net6.0/ZstdSharp.dll": {}
         }
       },
-      "KnowledgeApp.User.Contracts/1.0.0": {
+      "KnowledgeApp.User.Contracts/1.0.2": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
         "compile": {
@@ -965,13 +965,13 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
-    "KnowledgeApp.Common/1.0.2": {
-      "sha512": "OM0pMluyR+HqHsnt4z554jiGWWFByyielLsRjRg9z7GuEWLCPOX54sHYduxKo1V6p0T3jJ/+mTsyAG187/pypg==",
+    "KnowledgeApp.Common/1.0.3": {
+      "sha512": "OQK3MLnXP6ja4S/esqk9hWKyugbfdxwlweFG9yXiZihCaTC6gj7/bMeXd5bUtvz6lwIYa/VBmVYupJioFwnQrw==",
       "type": "package",
-      "path": "knowledgeapp.common/1.0.2",
+      "path": "knowledgeapp.common/1.0.3",
       "files": [
         ".nupkg.metadata",
-        "knowledgeapp.common.1.0.2.nupkg.sha512",
+        "knowledgeapp.common.1.0.3.nupkg.sha512",
         "knowledgeapp.common.nuspec",
         "lib/net8.0/KnowledgeApp.Common.dll"
       ]
@@ -2477,7 +2477,7 @@
         "zstdsharp.port.nuspec"
       ]
     },
-    "KnowledgeApp.User.Contracts/1.0.0": {
+    "KnowledgeApp.User.Contracts/1.0.2": {
       "type": "project",
       "path": "../KnowledgeApp.User.Contracts/KnowledgeApp.User.Contracts.csproj",
       "msbuildProject": "../KnowledgeApp.User.Contracts/KnowledgeApp.User.Contracts.csproj"
@@ -2485,8 +2485,8 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "KnowledgeApp.Common >= 1.0.2",
-      "KnowledgeApp.User.Contracts >= 1.0.0",
+      "KnowledgeApp.Common >= 1.0.3",
+      "KnowledgeApp.User.Contracts >= 1.0.2",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.0",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 8.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
@@ -2544,6 +2544,10 @@
         "targetAlias": "net8.0",
         "dependencies": {
           "KnowledgeApp.Common": {
+            "target": "Package",
+            "version": "[1.0.3, )"
+          },
+          "KnowledgeApp.User.Contracts": {
             "target": "Package",
             "version": "[1.0.2, )"
           },

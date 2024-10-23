@@ -24,6 +24,7 @@ namespace KnowledgeApp.Paragraph.Service.Controllers
         {
             try
             {
+                Console.WriteLine("Hitting get");
                 var paragraphs = await _paragraphsRepository.GetAllAsync();
 
                 if (paragraphs == null || !paragraphs.Any())

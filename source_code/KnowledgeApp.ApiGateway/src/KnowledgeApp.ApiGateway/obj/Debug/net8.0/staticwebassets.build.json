@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "lAtTN/NqyibQU6L3avLT+1eIvDj7CmPrwU8nSMPh3z0=",
+  "Source": "KnowledgeApp.ApiGateway",
+  "BasePath": "_content/KnowledgeApp.ApiGateway",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

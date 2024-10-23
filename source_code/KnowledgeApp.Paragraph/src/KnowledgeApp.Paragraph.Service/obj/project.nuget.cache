@@ -1,18 +1,20 @@
 {
   "version": 2,
-  "dgSpecHash": "OR3eU5tJeuo=",
+  "dgSpecHash": "rcFa6JJNX5w=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Paragraph\\src\\KnowledgeApp.Paragraph.Service\\KnowledgeApp.Paragraph.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emir\\.nuget\\packages\\awssdk.core\\3.7.100.14\\awssdk.core.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\awssdk.securitytoken\\3.7.100.14\\awssdk.securitytoken.3.7.100.14.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.2\\knowledgeapp.common.1.0.2.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.3\\knowledgeapp.common.1.0.3.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.paragraph.contracts\\1.0.1-alpha\\knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit\\8.2.5\\masstransit.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.abstractions\\8.2.5\\masstransit.abstractions.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.rabbitmq\\8.2.5\\masstransit.rabbitmq.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.0\\microsoft.aspnetcore.authentication.jwtbearer.8.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.aspnetcore.authentication.openidconnect\\8.0.0\\microsoft.aspnetcore.authentication.openidconnect.8.0.0.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\microsoft.aspnetcore.openapi\\8.0.0\\microsoft.aspnetcore.openapi.8.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.extensions.apidescription.server\\6.0.5\\microsoft.extensions.apidescription.server.6.0.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.extensions.configuration\\8.0.0\\microsoft.extensions.configuration.8.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\8.0.0\\microsoft.extensions.configuration.abstractions.8.0.0.nupkg.sha512",
@@ -34,7 +36,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.identitymodel.protocols.openidconnect\\7.0.3\\microsoft.identitymodel.protocols.openidconnect.7.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.identitymodel.tokens\\7.0.3\\microsoft.identitymodel.tokens.7.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\microsoft.openapi\\1.2.3\\microsoft.openapi.1.2.3.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\microsoft.openapi\\1.4.3\\microsoft.openapi.1.4.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\mongodb.bson\\2.19.0\\mongodb.bson.2.19.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\mongodb.driver\\2.19.0\\mongodb.driver.2.19.0.nupkg.sha512",
@@ -55,8 +57,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.paragraph.contracts\\1.0.1-alpha\\knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512"
+    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
   "logs": []
 }

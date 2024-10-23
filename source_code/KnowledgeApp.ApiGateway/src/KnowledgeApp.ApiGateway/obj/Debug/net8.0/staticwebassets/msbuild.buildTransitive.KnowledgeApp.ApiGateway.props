@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\KnowledgeApp.ApiGateway.props" />
+</Project>
