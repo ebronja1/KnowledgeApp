@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.1",
       "restore": {
         "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj",
         "projectName": "KnowledgeApp.JwtAuthenticationManager",

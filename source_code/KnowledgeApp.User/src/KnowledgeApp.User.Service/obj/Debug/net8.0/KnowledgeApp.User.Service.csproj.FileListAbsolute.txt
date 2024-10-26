@@ -60,3 +60,5 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeAp
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\KnowledgeApp.User.Service.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\KnowledgeApp.User.Service.genruntimeconfig.cache
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\ref\KnowledgeApp.User.Service.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\KnowledgeApp.Authentication.JwtAuthenticationManager.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll

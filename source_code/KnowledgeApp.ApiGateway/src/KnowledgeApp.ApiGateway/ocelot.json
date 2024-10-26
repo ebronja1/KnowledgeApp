@@ -1,5 +1,17 @@
 {
   "Routes": [
+     {
+      "UpstreamPathTemplate": "/Account",
+      "UpstreamHttpMethod": [ "Post" ],
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "authentication-service",
+          "Port": 8080
+        }
+      ],
+      "DownstreamPathTemplate": "/Account"
+    },
     {
       "DownstreamPathTemplate": "/paragraphs/{everything}",
       "DownstreamScheme": "http",

@@ -3,6 +3,8 @@ using MassTransit;
 using KnowledgeApp.User.Contracts;
 using Microsoft.AspNetCore.Mvc;
 using KnowledgeApp.User.Service.Models;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 
 namespace KnowledgeApp.User.Service.Controllers
 {
@@ -20,6 +22,7 @@ namespace KnowledgeApp.User.Service.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> GetAsync()
         {
             try
@@ -56,6 +59,7 @@ namespace KnowledgeApp.User.Service.Controllers
 
         // POST /Users
         [HttpPost]
+        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult<UserDto>> PostAsync(UserCreateDto userCreateDto)
         {
             var userModel = new UserModel

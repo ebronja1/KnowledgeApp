@@ -1,0 +1,13 @@
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\bin\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.deps.json
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\bin\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\bin\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.pdb
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.csproj.AssemblyReference.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.AssemblyInfoInputs.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.AssemblyInfo.cs
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.csproj.CoreCompileInputs.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.sourcelink.json
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\refint\KnowledgeApp.JwtAuthenticationManager.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\KnowledgeApp.JwtAuthenticationManager.pdb
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.JwtAuthenticationManager\obj\Debug\net8.0\ref\KnowledgeApp.JwtAuthenticationManager.dll

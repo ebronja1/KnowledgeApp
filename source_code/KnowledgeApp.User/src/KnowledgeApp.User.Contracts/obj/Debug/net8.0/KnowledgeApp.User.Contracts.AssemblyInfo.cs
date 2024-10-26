@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeApp.User.Contracts")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.2.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+49d13f4e5cad760f59f7c4fc8e301d7305fd813c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.2+138e5c894ffaed1bf93af2b954e2a1378c400957")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeApp.User.Contracts")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeApp.User.Contracts")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.2.0")]

@@ -115,6 +115,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "KnowledgeApp.Authentication.JwtAuthenticationManager": {
+              "target": "Package",
+              "version": "[1.0.1, )"
+            },
             "KnowledgeApp.Common": {
               "target": "Package",
               "version": "[1.0.3, )"
@@ -125,7 +129,7 @@
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
-              "version": "[8.0.0, )"
+              "version": "[8.0.10, )"
             },
             "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
               "target": "Package",

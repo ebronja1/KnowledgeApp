@@ -1,0 +1,8 @@
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.csproj.AssemblyReference.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.AssemblyInfoInputs.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.AssemblyInfo.cs
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.csproj.CoreCompileInputs.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.Authentication\src\KnowledgeApp.Authentication.Service\obj\Debug\net8.0\KnowledgeApp.Authentication.Service.sourcelink.json

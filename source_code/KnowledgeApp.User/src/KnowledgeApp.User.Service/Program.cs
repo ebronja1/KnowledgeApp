@@ -3,6 +3,7 @@ using KnowledgeApp.User.Service.Models;
 using KnowledgeApp.Common.MassTransit;
 using KnowledgeApp.Common.MongoDB;
 using KnowledgeApp.Common.Settings;
+using KnowledgeApp.Authentication.JwtAuthenticationManager;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -18,6 +19,8 @@ builder.Services.AddControllers(options =>
 {
     options.SuppressAsyncSuffixInActionNames = false;
 });
+
+builder.Services.AddCustomJwtAuthentication();
 
 // Add Swagger/OpenAPI
 builder.Services.AddEndpointsApiExplorer();
@@ -56,6 +59,7 @@ app.UseCors();
 // Use HTTPS redirection and routing
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

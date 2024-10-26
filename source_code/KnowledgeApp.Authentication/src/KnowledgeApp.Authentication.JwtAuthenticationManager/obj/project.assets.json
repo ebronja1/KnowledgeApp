@@ -424,9 +424,9 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj",
-      "projectName": "KnowledgeApp.JwtAuthenticationManager",
-      "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj",
+      "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.Authentication.JwtAuthenticationManager.csproj",
+      "projectName": "KnowledgeApp.Authentication.JwtAuthenticationManager",
+      "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.Authentication.JwtAuthenticationManager.csproj",
       "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
       "outputPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\obj\\",
       "projectStyle": "PackageReference",
