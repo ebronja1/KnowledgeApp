@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QW0GXLpJo7g=",
+  "dgSpecHash": "3akejwP9wz4=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.JwtAuthenticationManager\\src\\KnowledgeApp.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj",
+  "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.JwtAuthenticationManager.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.aspnetcore.authentication.jwtbearer\\8.0.10\\microsoft.aspnetcore.authentication.jwtbearer.8.0.10.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\microsoft.bcl.timeprovider\\8.0.1\\microsoft.bcl.timeprovider.8.0.1.nupkg.sha512",

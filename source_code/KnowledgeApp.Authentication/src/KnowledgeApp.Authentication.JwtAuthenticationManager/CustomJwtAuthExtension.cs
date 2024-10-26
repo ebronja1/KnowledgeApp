@@ -3,7 +3,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.IdentityModel.Tokens;
 using System.Text;
 
-namespace KnowledgeApp.JwtAuthenticationManager
+namespace KnowledgeApp.Authentication.JwtAuthenticationManager
 {
     public static class CustomJwtAuthExtension
     {

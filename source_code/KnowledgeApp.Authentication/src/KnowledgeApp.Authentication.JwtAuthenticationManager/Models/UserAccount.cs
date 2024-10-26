@@ -1,4 +1,4 @@
-namespace KnowledgeApp.JwtAuthenticationManager.Models
+namespace KnowledgeApp.Authentication.JwtAuthenticationManager.Models
 {
     public class UserAccount
     {

@@ -1,10 +1,10 @@
-using KnowledgeApp.JwtAuthenticationManager.Models;
+using KnowledgeApp.Authentication.JwtAuthenticationManager.Models;
 using Microsoft.IdentityModel.Tokens;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
 
-namespace KnowledgeApp.JwtAuthenticationManager
+namespace KnowledgeApp.Authentication.JwtAuthenticationManager
 {
     public class JwtTokenHandler
     {
