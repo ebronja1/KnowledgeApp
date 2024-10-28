@@ -2,12 +2,13 @@
 <package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
   <metadata>
     <id>KnowledgeApp.Authentication.JwtAuthenticationManager</id>
-    <version>1.0.1</version>
+    <version>1.0.2</version>
     <authors>KnowledgeApp.Authentication.JwtAuthenticationManager</authors>
     <description>Package Description</description>
-    <repository type="git" commit="138e5c894ffaed1bf93af2b954e2a1378c400957" />
+    <repository type="git" commit="3cb8b056580ac6ab1b7e6460eced520d109aa8a7" />
     <dependencies>
       <group targetFramework="net8.0">
+        <dependency id="KnowledgeApp.Common" version="1.0.3" exclude="Build,Analyzers" />
         <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="8.0.10" exclude="Build,Analyzers" />
         <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
         <dependency id="Microsoft.IdentityModel.Tokens" version="8.1.2" exclude="Build,Analyzers" />

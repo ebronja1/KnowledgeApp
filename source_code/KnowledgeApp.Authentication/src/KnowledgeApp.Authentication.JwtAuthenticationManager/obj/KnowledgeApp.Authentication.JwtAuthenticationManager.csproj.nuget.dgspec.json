@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.Authentication.JwtAuthenticationManager.csproj": {
-      "version": "1.0.0",
+      "version": "1.0.3",
       "restore": {
         "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Authentication\\src\\KnowledgeApp.Authentication.JwtAuthenticationManager\\KnowledgeApp.Authentication.JwtAuthenticationManager.csproj",
         "projectName": "KnowledgeApp.Authentication.JwtAuthenticationManager",
@@ -48,6 +48,10 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
+            "KnowledgeApp.Common": {
+              "target": "Package",
+              "version": "[1.0.3, )"
+            },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
               "version": "[8.0.10, )"

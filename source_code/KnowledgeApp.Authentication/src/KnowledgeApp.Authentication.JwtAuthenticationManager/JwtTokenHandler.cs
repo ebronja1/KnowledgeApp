@@ -10,32 +10,20 @@ namespace KnowledgeApp.Authentication.JwtAuthenticationManager
     {
         public const string JWT_SECURITY_KEY = "yPkCqn4kSWLtaJwXvN2jGzpQRyTZ3gdXkt7FeBJP";
         private const int JWT_TOKEN_VALIDITY_MINS = 20;
-        private readonly List<UserAccount> _userAccountList;
-
-        public JwtTokenHandler()
-        {
-            _userAccountList = new List<UserAccount>
-            {
-                new UserAccount{ UserName = "admin", Password = "admin123", Role = "Administrator" },
-                new UserAccount{ UserName = "user01", Password = "user01", Role = "User" },
-            };
-        }
-
-        public AuthenticationResponse? GenerateJwtToken(AuthenticationRequest authenticationRequest)
+    
+        public AuthenticationResponse? GenerateJwtToken(AuthenticationRequest authenticationRequest, string userName, string role)
         {
             if (string.IsNullOrWhiteSpace(authenticationRequest.UserName) || string.IsNullOrWhiteSpace(authenticationRequest.Password))
                 return null;
 
             /* Validation */
-            var userAccount = _userAccountList.Where(x => x.UserName == authenticationRequest.UserName && x.Password == authenticationRequest.Password).FirstOrDefault();
-            if (userAccount == null) return null;
 
             var tokenExpiryTimeStamp = DateTime.Now.AddMinutes(JWT_TOKEN_VALIDITY_MINS);
             var tokenKey = Encoding.ASCII.GetBytes(JWT_SECURITY_KEY);
             var claimsIdentity = new ClaimsIdentity(new List<Claim>
             {
                 new Claim(JwtRegisteredClaimNames.Name, authenticationRequest.UserName),
-                new Claim("Role", userAccount.Role)
+                new Claim("Role", role)
             });
 
             var signingCredentials = new SigningCredentials(
@@ -55,7 +43,7 @@ namespace KnowledgeApp.Authentication.JwtAuthenticationManager
 
             return new AuthenticationResponse
             {
-                UserName = userAccount.UserName,
+                UserName = userName,
                 ExpiresIn = (int)tokenExpiryTimeStamp.Subtract(DateTime.Now).TotalSeconds,
                 JwtToken = token
             };

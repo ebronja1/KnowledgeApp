@@ -45,12 +45,6 @@ services:
       - mongo
       - rabbitmq
 
-  authentication-service:
-    build:
-      context: .
-      dockerfile: ./source_code/KnowledgeApp.Authentication/src/KnowledgeApp.Authentication.Service/Dockerfile
-    container_name: authentication-service
-
   user-service:
     build:
       context: .

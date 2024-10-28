@@ -47,9 +47,10 @@
           }
         }
       },
-      "KnowledgeApp.Authentication.JwtAuthenticationManager/1.0.1": {
+      "KnowledgeApp.Authentication.JwtAuthenticationManager/1.0.3": {
         "type": "package",
         "dependencies": {
+          "KnowledgeApp.Common": "1.0.3",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
           "Microsoft.Extensions.DependencyInjection.Abstractions": "8.0.0",
           "Microsoft.IdentityModel.Tokens": "8.1.2",
@@ -998,13 +999,13 @@
         "lib/netstandard2.1/DnsClient.xml"
       ]
     },
-    "KnowledgeApp.Authentication.JwtAuthenticationManager/1.0.1": {
-      "sha512": "XReot+sfTosW1vd5RzBB3U7sb7oanVHSa2c64vc+1ssOS+bm+eQF5S1x7H+oBnqcWFZnWIXYCKL0wtKLQNxzwg==",
+    "KnowledgeApp.Authentication.JwtAuthenticationManager/1.0.3": {
+      "sha512": "H8CmmWDZYcnZGt3gThbMDkrb++5Z8HPo7XHOUapyf8PcDZjk8gnisGZo09tZNJLBohnjtL8ZP6nqp2bbg70DQw==",
       "type": "package",
-      "path": "knowledgeapp.authentication.jwtauthenticationmanager/1.0.1",
+      "path": "knowledgeapp.authentication.jwtauthenticationmanager/1.0.3",
       "files": [
         ".nupkg.metadata",
-        "knowledgeapp.authentication.jwtauthenticationmanager.1.0.1.nupkg.sha512",
+        "knowledgeapp.authentication.jwtauthenticationmanager.1.0.3.nupkg.sha512",
         "knowledgeapp.authentication.jwtauthenticationmanager.nuspec",
         "lib/net8.0/KnowledgeApp.Authentication.JwtAuthenticationManager.dll"
       ]
@@ -2560,7 +2561,7 @@
   },
   "projectFileDependencyGroups": {
     "net8.0": [
-      "KnowledgeApp.Authentication.JwtAuthenticationManager >= 1.0.1",
+      "KnowledgeApp.Authentication.JwtAuthenticationManager >= 1.0.3",
       "KnowledgeApp.Common >= 1.0.3",
       "KnowledgeApp.User.Contracts >= 1.0.2",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
@@ -2621,7 +2622,7 @@
         "dependencies": {
           "KnowledgeApp.Authentication.JwtAuthenticationManager": {
             "target": "Package",
-            "version": "[1.0.1, )"
+            "version": "[1.0.3, )"
           },
           "KnowledgeApp.Common": {
             "target": "Package",

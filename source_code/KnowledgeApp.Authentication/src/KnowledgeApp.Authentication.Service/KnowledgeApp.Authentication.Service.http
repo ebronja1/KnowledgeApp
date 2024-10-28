@@ -1,6 +1,0 @@
-@KnowledgeApp.Authentication.Service_HostAddress = http://localhost:5184
-
-GET {{KnowledgeApp.Authentication.Service_HostAddress}}/weatherforecast/
-Accept: application/json
-
-###

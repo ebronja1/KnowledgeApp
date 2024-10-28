@@ -6,7 +6,7 @@ namespace KnowledgeApp.User.Service
     {
         public static UserDto AsDto(this UserModel user)
         {
-            return new UserDto(user.Id, user.UserName, user.Password);
+            return new UserDto(user.Id, user.UserName, user.Password, user.Role);
         }
     }
 }

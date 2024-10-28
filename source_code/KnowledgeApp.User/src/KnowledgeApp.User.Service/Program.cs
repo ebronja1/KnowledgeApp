@@ -15,6 +15,8 @@ builder.Services.AddMongo()
     .AddMongoRepository<UserModel>("User")
     .AddMassTransitWithRabbitMq();
 
+builder.Services.AddSingleton<JwtTokenHandler>();
+
 builder.Services.AddControllers(options =>
 {
     options.SuppressAsyncSuffixInActionNames = false;

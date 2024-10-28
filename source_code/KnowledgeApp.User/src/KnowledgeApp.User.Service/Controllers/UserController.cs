@@ -5,6 +5,8 @@ using Microsoft.AspNetCore.Mvc;
 using KnowledgeApp.User.Service.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
+using KnowledgeApp.Authentication.JwtAuthenticationManager;
+using KnowledgeApp.Authentication.JwtAuthenticationManager.Models;
 
 namespace KnowledgeApp.User.Service.Controllers
 {
@@ -15,14 +17,16 @@ namespace KnowledgeApp.User.Service.Controllers
         private readonly IRepository<UserModel> _usersRepository;
         private readonly IPublishEndpoint _publishEndpoint;
 
-        public UsersController(IRepository<UserModel> usersRepository, IPublishEndpoint publishEndpoint)
+        private readonly JwtTokenHandler _jwtTokenHandler;
+
+        public UsersController(IRepository<UserModel> usersRepository, IPublishEndpoint publishEndpoint, JwtTokenHandler jwtTokenHandler)
         {
             _usersRepository = usersRepository;
             _publishEndpoint = publishEndpoint;
+            _jwtTokenHandler = jwtTokenHandler;
         }
 
         [HttpGet]
-        [Authorize]
         public async Task<IActionResult> GetAsync()
         {
             try
@@ -59,13 +63,13 @@ namespace KnowledgeApp.User.Service.Controllers
 
         // POST /Users
         [HttpPost]
-        [Authorize(Roles = "Administrator")]
         public async Task<ActionResult<UserDto>> PostAsync(UserCreateDto userCreateDto)
         {
             var userModel = new UserModel
             {
                 UserName = userCreateDto.UserName,
-                Password = userCreateDto.Password
+                Password = userCreateDto.Password,
+                Role = userCreateDto.Role
             };
 
             await _usersRepository.CreateAsync(userModel);
@@ -88,6 +92,7 @@ namespace KnowledgeApp.User.Service.Controllers
 
             existingUser.UserName = userUpdateDto.UserName;
             existingUser.Password = userUpdateDto.Password;
+            existingUser.Role = userUpdateDto.Role;
 
             await _usersRepository.UpdateAsync(existingUser);
 
@@ -113,5 +118,36 @@ namespace KnowledgeApp.User.Service.Controllers
 
             return NoContent();
         }
+    
+
+        [HttpPost("auth")]
+        public async Task<ActionResult<AuthenticationResponse?>> Authenticate([FromBody] AuthenticationRequest authenticationRequest)
+        {
+            try
+            {
+                Console.WriteLine("came to auth");
+                var users = await _usersRepository.GetAllAsync();
+
+                var userDtos = users.Select(user => user.AsDto()).ToList();
+                var userFound = userDtos.FirstOrDefault(user => user.UserName == authenticationRequest.UserName);
+
+                if (userFound == null)
+                {
+                    return Unauthorized(); // Return 401 if user is not found
+                }
+
+                // Generate JWT token for the found user
+                var authenticationResponse = _jwtTokenHandler.GenerateJwtToken(authenticationRequest, userFound.UserName, userFound.Role);
+
+                return Ok(authenticationResponse); // Return 200 OK with the JWT token
+            }
+            catch (Exception ex)
+            {
+                // Log the exception (consider using a logging framework)
+                return StatusCode(500, "Internal server error: " + ex.Message); // Return 500 for unexpected errors
+            }
+
+        }
+
     }
 }

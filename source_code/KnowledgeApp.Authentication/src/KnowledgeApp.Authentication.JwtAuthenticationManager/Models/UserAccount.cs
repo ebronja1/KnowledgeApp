@@ -1,3 +1,5 @@
+using KnowledgeApp.Common;
+
 namespace KnowledgeApp.Authentication.JwtAuthenticationManager.Models
 {
     public class UserAccount
