@@ -6,6 +6,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add Ocelot configuration
 builder.Configuration.AddJsonFile("ocelot.json", optional: false, reloadOnChange: true);
 builder.Services.AddOcelot();
+builder.Services.AddCustomJwtAuthentication();
 
 var app = builder.Build();
 
@@ -17,6 +18,9 @@ app.UseEndpoints(endpoints =>
 
 // Configure Ocelot middleware
 await app.UseOcelot();
+
+app.UseAuthentication();
+app.UseAuthorization();
 
 app.Run();
 

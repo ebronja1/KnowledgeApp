@@ -10,6 +10,7 @@
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="8.0.2" />
     <PackageReference Include="Ocelot" Version="23.3.4" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+    <PackageReference Include="KnowledgeApp.Authentication.JwtAuthenticationManager" Version="1.0.3" />
   </ItemGroup>
 
 </Project>
