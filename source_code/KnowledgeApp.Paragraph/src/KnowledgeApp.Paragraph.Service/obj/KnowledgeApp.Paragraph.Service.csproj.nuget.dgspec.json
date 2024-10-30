@@ -50,7 +50,7 @@
           "dependencies": {
             "KnowledgeApp.Common": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.4, )"
             },
             "KnowledgeApp.Paragraph.Contracts": {
               "target": "Package",

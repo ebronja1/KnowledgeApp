@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>KnowledgeApp.Authentication.JwtAuthenticationManager</id>
+    <version>1.0.4</version>
+    <authors>KnowledgeApp.Authentication.JwtAuthenticationManager</authors>
+    <description>Package Description</description>
+    <repository type="git" commit="d30fcce03c72b86523346f607be2d1343fd774bb" />
+    <dependencies>
+      <group targetFramework="net8.0">
+        <dependency id="KnowledgeApp.Common" version="1.0.4" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.AspNetCore.Authentication.JwtBearer" version="8.0.10" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.Extensions.DependencyInjection.Abstractions" version="8.0.0" exclude="Build,Analyzers" />
+        <dependency id="Microsoft.IdentityModel.Tokens" version="8.1.2" exclude="Build,Analyzers" />
+        <dependency id="System.IdentityModel.Tokens.Jwt" version="8.1.2" exclude="Build,Analyzers" />
+      </group>
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\Emir\Desktop\KnowledgeApp\packages\net8.0\KnowledgeApp.Authentication.JwtAuthenticationManager.dll" target="lib\net8.0\KnowledgeApp.Authentication.JwtAuthenticationManager.dll" />
+  </files>
+</package>
