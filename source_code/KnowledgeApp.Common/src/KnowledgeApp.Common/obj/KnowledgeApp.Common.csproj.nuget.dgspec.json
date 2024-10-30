@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj": {
-      "version": "1.0.3",
+      "version": "1.0.5",
       "restore": {
         "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj",
         "projectName": "KnowledgeApp.Common",
@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[8.2.5, )"
             },
+            "Microsoft.Extensions.Caching.StackExchangeRedis": {
+              "target": "Package",
+              "version": "[7.0.0, )"
+            },
             "Microsoft.Extensions.Configuration": {
               "target": "Package",
               "version": "[8.0.0, )"
@@ -71,6 +75,10 @@
             "MongoDB.Driver": {
               "target": "Package",
               "version": "[2.19.0, )"
+            },
+            "StackExchange.Redis": {
+              "target": "Package",
+              "version": "[2.8.16, )"
             }
           },
           "imports": [

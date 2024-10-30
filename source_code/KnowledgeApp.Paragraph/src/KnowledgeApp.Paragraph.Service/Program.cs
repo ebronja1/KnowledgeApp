@@ -3,6 +3,7 @@ using KnowledgeApp.Paragraph.Service.Models;
 using KnowledgeApp.Common.MassTransit;
 using KnowledgeApp.Common.MongoDB;
 using KnowledgeApp.Common.Settings;
+using KnowledgeApp.Common.Redis;  // Redis extension
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,7 +13,10 @@ var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).
 // Add services to the container.
 builder.Services.AddMongo()
     .AddMongoRepository<ParagraphModel>("Paragraph")
-    .AddMassTransitWithRabbitMq();
+    .AddMassTransitWithRabbitMq()
+    .AddRedisCacheService();
+    
+builder.Services.AddRedisCache();  // Use the Redis extension
 
 builder.Services.AddControllers(options =>
 {
@@ -38,7 +42,6 @@ builder.Services.AddCors(options =>
             .AllowAnyMethod();
     });
 });
-;
 
 var app = builder.Build();
 
