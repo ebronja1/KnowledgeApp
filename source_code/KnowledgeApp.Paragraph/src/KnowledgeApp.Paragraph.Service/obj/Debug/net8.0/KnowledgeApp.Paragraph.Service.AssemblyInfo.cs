@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeApp.Paragraph.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c91812451e3e835c511d7d13ce56a1d9d9cf89b2")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e86b901455bfb4efce00ef528506bd39a3ef7912")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeApp.Paragraph.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeApp.Paragraph.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
