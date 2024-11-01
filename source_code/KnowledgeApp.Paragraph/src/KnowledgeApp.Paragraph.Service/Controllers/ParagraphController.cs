@@ -17,6 +17,7 @@ namespace KnowledgeApp.Paragraph.Service.Controllers
         private bool isCached;
 
         private const string CacheKeyPrefix = "Paragraph_";
+        private const string IdempotencyKeyPrefix = "IdempotencyKey_";
 
         public ParagraphsController(IRepository<ParagraphModel> paragraphsRepository, IPublishEndpoint publishEndpoint, RedisCacheService redisCacheService)
         {
@@ -93,9 +94,26 @@ namespace KnowledgeApp.Paragraph.Service.Controllers
         }
 
         // POST /paragraphs
+       
         [HttpPost]
-        public async Task<ActionResult<ParagraphDto>> PostAsync(ParagraphCreateDto paragraphCreateDto)
+        public ActionResult<ParagraphDto> PostAsync(ParagraphCreateDto paragraphCreateDto, [FromHeader(Name = "Idempotency-Key")] string idempotencyKey)
         {
+            if (string.IsNullOrWhiteSpace(idempotencyKey))
+            {
+                return BadRequest("Idempotency-Key header is required.");
+            }
+
+            // Check if this idempotency key has been used
+            var existingId = _redisCacheService.GetCachedData<Guid>($"{IdempotencyKeyPrefix}{idempotencyKey}");
+            if (existingId != Guid.Empty)
+            {
+                var existingParagraph = _paragraphsRepository.GetAsync(existingId).Result; // Synchronously wait for the repository call
+                if (existingParagraph != null)
+                {
+                    return CreatedAtAction(nameof(GetByIdAsync), new { id = existingParagraph.Id }, existingParagraph.AsDto());
+                }
+            }
+
             var paragraphModel = new ParagraphModel
             {
                 Book = paragraphCreateDto.Book,
@@ -104,43 +122,16 @@ namespace KnowledgeApp.Paragraph.Service.Controllers
                 ParagraphNumber = paragraphCreateDto.ParagraphNumber,
             };
 
-            await _paragraphsRepository.CreateAsync(paragraphModel);
+            _paragraphsRepository.CreateAsync(paragraphModel).Wait(); // Synchronously wait for the repository call
+            // Store the idempotency key with the paragraph ID in Redis
+            _redisCacheService.SetCachedData($"{IdempotencyKeyPrefix}{idempotencyKey}", paragraphModel.Id, TimeSpan.FromMinutes(10));
 
-            await _publishEndpoint.Publish(new ParagraphCreated(paragraphModel.Id, paragraphCreateDto.ChapterNumber, paragraphCreateDto.ParagraphNumber));
+            _publishEndpoint.Publish(new ParagraphCreated(paragraphModel.Id, paragraphCreateDto.ChapterNumber, paragraphCreateDto.ParagraphNumber)).Wait(); // Synchronously wait for publish
 
             // Invalidate cache for all paragraphs since a new paragraph was added
             _redisCacheService.RemoveCachedData($"{CacheKeyPrefix}All");
 
             return CreatedAtAction(nameof(GetByIdAsync), new { id = paragraphModel.Id }, paragraphModel);
-        }
-
-        // PUT /paragraphs/{id}
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutAsync(Guid id, ParagraphUpdateDto paragraphUpdateDto)
-        {
-            var existingParagraph = await _paragraphsRepository.GetAsync(id);
-
-            if (existingParagraph == null)
-            {
-                return NotFound();
-            }
-
-            existingParagraph.Book = paragraphUpdateDto.Book;
-            existingParagraph.Chapter = paragraphUpdateDto.Chapter;
-            existingParagraph.ChapterNumber = paragraphUpdateDto.ChapterNumber;
-            existingParagraph.ParagraphNumber = paragraphUpdateDto.ParagraphNumber;
-
-            await _paragraphsRepository.UpdateAsync(existingParagraph);
-
-            await _publishEndpoint.Publish(new ParagraphUpdated(existingParagraph.Id, existingParagraph.ChapterNumber, existingParagraph.ParagraphNumber));
-
-            // Update cached data for this specific paragraph
-            _redisCacheService.SetCachedData($"{CacheKeyPrefix}{id}", existingParagraph.AsDto(), TimeSpan.FromMinutes(10));
-
-            // Invalidate cache for all paragraphs
-            _redisCacheService.RemoveCachedData($"{CacheKeyPrefix}All");
-
-            return NoContent();
         }
 
         // DELETE /paragraphs/{id}
