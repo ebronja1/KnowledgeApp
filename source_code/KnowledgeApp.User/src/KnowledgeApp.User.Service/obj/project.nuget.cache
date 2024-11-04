@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "ASZ53g/4Hn4=",
+  "dgSpecHash": "EO0+vJXWMqo=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
   "expectedPackageFiles": [
@@ -9,7 +9,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.authentication.jwtauthenticationmanager\\1.0.3\\knowledgeapp.authentication.jwtauthenticationmanager.1.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.3\\knowledgeapp.common.1.0.3.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.0.9\\knowledgeapp.user.contracts.1.0.9.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.1.1\\knowledgeapp.user.contracts.1.1.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit\\8.2.5\\masstransit.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.abstractions\\8.2.5\\masstransit.abstractions.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.rabbitmq\\8.2.5\\masstransit.rabbitmq.8.2.5.nupkg.sha512",

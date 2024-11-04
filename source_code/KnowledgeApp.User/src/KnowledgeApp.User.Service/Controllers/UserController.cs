@@ -16,14 +16,20 @@ namespace KnowledgeApp.User.Service.Controllers
     {
         private readonly IRepository<UserModel> _usersRepository;
         private readonly IPublishEndpoint _publishEndpoint;
-
+        private readonly IRequestClient<UserCreated> _userCreatedClient;
+        private readonly IRequestClient<UserUpdated> _userUpdatedClient;
+        private readonly IRequestClient<UserDeleted> _userDeletedClient;
         private readonly JwtTokenHandler _jwtTokenHandler;
 
-        public UsersController(IRepository<UserModel> usersRepository, IPublishEndpoint publishEndpoint, JwtTokenHandler jwtTokenHandler)
+        public UsersController(IRepository<UserModel> usersRepository, IPublishEndpoint publishEndpoint, JwtTokenHandler jwtTokenHandler,
+            IRequestClient<UserCreated> userCreatedClient, IRequestClient<UserUpdated> userUpdatedClient, IRequestClient<UserDeleted> userDeletedClient)
         {
             _usersRepository = usersRepository;
             _publishEndpoint = publishEndpoint;
             _jwtTokenHandler = jwtTokenHandler;
+            _userCreatedClient = userCreatedClient;
+            _userUpdatedClient = userUpdatedClient;
+            _userDeletedClient = userDeletedClient;
         }
 
         [HttpGet]
@@ -73,10 +79,30 @@ namespace KnowledgeApp.User.Service.Controllers
                 Role = userCreateDto.Role
             };
 
+            // Create the user in the User service
             await _usersRepository.CreateAsync(userModel);
 
-            await _publishEndpoint.Publish(new UserCreated(userModel.Id, userModel.UserName));
+            try
+            {
+                // Send the UserCreated request and await a response
+                var response = await _userCreatedClient.GetResponse<UserCreatedResponse>(new UserCreated(userModel.Id, userModel.UserName));
 
+                if (!response.Message.IsSuccessful)
+                {
+                    // Roll back the user creation if the response indicates failure
+                    await _usersRepository.RemoveAsync(userModel.Id);
+                    return StatusCode(StatusCodes.Status500InternalServerError, $"User creation failed: {response.Message.Message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle any communication errors
+                Console.WriteLine($"Error during user creation: {ex.Message}");
+                await _usersRepository.RemoveAsync(userModel.Id);
+                return StatusCode(StatusCodes.Status500InternalServerError, "User creation failed due to an unexpected error.");
+            }
+
+            // Return the created user
             return CreatedAtAction(nameof(GetByIdAsync), new { id = userModel.Id }, userModel);
         }
 
@@ -91,17 +117,44 @@ namespace KnowledgeApp.User.Service.Controllers
                 return NotFound();
             }
 
-            var OldUserName = existingUser.UserName;
-            var OldPassword = existingUser.Password;
-            var OldRole = existingUser.Role;
+            var oldUserName = existingUser.UserName;
+            var oldPassword = existingUser.Password;
+            var oldRole = existingUser.Role;
 
+            // Update local data in anticipation of success
             existingUser.UserName = userUpdateDto.UserName;
             existingUser.Password = userUpdateDto.Password;
             existingUser.Role = userUpdateDto.Role;
 
             await _usersRepository.UpdateAsync(existingUser);
 
-            await _publishEndpoint.Publish(new UserUpdated(existingUser.Id, existingUser.UserName, OldUserName, OldPassword, OldRole));
+            try
+            {
+                // Send update request and await response
+                var response = await _userUpdatedClient.GetResponse<UserUpdatedResponse>(new UserUpdated(existingUser.Id, existingUser.UserName));
+
+                if (!response.Message.IsSuccessful)
+                {
+                    // Rollback if the update was unsuccessful
+                    existingUser.UserName = oldUserName;
+                    existingUser.Password = oldPassword;
+                    existingUser.Role = oldRole;
+
+                    await _usersRepository.UpdateAsync(existingUser);
+                    return StatusCode(StatusCodes.Status500InternalServerError, $"User update failed: {response.Message.Message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Handle communication error by rolling back
+                existingUser.UserName = oldUserName;
+                existingUser.Password = oldPassword;
+                existingUser.Role = oldRole;
+
+                await _usersRepository.UpdateAsync(existingUser);
+                Console.WriteLine($"Error during user update: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "User update failed due to an unexpected error.");
+            }
 
             return NoContent();
         }
@@ -117,11 +170,32 @@ namespace KnowledgeApp.User.Service.Controllers
                 return NotFound();
             }
 
-            await _publishEndpoint.Publish(new UserDeleted(id));
+            // Delete locally and publish deletion request
+            await _usersRepository.RemoveAsync(userModel.Id);
+
+            try
+            {
+                // Send delete request and await response
+                var response = await _userDeletedClient.GetResponse<UserDeletedResponse>(new UserDeleted(userModel.Id));
+
+                if (!response.Message.IsSuccessful)
+                {
+                    // Rollback the delete if the response indicates failure
+                    await _usersRepository.CreateAsync(userModel);
+                    return StatusCode(StatusCodes.Status500InternalServerError, $"User deletion failed: {response.Message.Message}");
+                }
+            }
+            catch (Exception ex)
+            {
+                // Rollback in case of communication error
+                await _usersRepository.CreateAsync(userModel);
+                Console.WriteLine($"Error during user deletion: {ex.Message}");
+                return StatusCode(StatusCodes.Status500InternalServerError, "User deletion failed due to an unexpected error.");
+            }
 
             return NoContent();
         }
-    
+        
 
         [HttpPost("auth")]
         public async Task<ActionResult<AuthenticationResponse?>> Authenticate([FromBody] AuthenticationRequest authenticationRequest)

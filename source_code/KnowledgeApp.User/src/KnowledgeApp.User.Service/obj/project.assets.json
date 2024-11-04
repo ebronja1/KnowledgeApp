@@ -80,7 +80,7 @@
           "lib/net8.0/KnowledgeApp.Common.dll": {}
         }
       },
-      "KnowledgeApp.User.Contracts/1.0.9": {
+      "KnowledgeApp.User.Contracts/1.1.1": {
         "type": "package",
         "compile": {
           "lib/net8.0/KnowledgeApp.User.Contracts.dll": {}
@@ -1049,13 +1049,13 @@
         "lib/net8.0/KnowledgeApp.Common.dll"
       ]
     },
-    "KnowledgeApp.User.Contracts/1.0.9": {
-      "sha512": "RuWMy33MKQ0CWQMy1idY+aWu+ltakCKpc+iO4EhPhudQxcxnz7P0hAMUOuIbuPrFfS5l0ioPO57ZAKgKL4px8w==",
+    "KnowledgeApp.User.Contracts/1.1.1": {
+      "sha512": "Nd4+4pwHtW/xWswuKi3MqCNEbms8HNpWxfMq4vO7uUzz6LYvTRiCc05zdi7LhRjYtd0S+zQaZ4E/bhHs7BdifQ==",
       "type": "package",
-      "path": "knowledgeapp.user.contracts/1.0.9",
+      "path": "knowledgeapp.user.contracts/1.1.1",
       "files": [
         ".nupkg.metadata",
-        "knowledgeapp.user.contracts.1.0.9.nupkg.sha512",
+        "knowledgeapp.user.contracts.1.1.1.nupkg.sha512",
         "knowledgeapp.user.contracts.nuspec",
         "lib/net8.0/KnowledgeApp.User.Contracts.dll"
       ]
@@ -2650,7 +2650,7 @@
     "net8.0": [
       "KnowledgeApp.Authentication.JwtAuthenticationManager >= 1.0.3",
       "KnowledgeApp.Common >= 1.0.3",
-      "KnowledgeApp.User.Contracts >= 1.0.9",
+      "KnowledgeApp.User.Contracts >= 1.1.1",
       "Microsoft.AspNetCore.Authentication.JwtBearer >= 8.0.10",
       "Microsoft.AspNetCore.Authentication.OpenIdConnect >= 8.0.0",
       "Polly >= 8.4.2",
@@ -2714,7 +2714,7 @@
           },
           "KnowledgeApp.User.Contracts": {
             "target": "Package",
-            "version": "[1.0.9, )"
+            "version": "[1.1.1, )"
           },
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
             "target": "Package",

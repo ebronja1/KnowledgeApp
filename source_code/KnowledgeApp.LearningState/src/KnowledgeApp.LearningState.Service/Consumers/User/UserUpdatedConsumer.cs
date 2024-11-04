@@ -24,9 +24,6 @@ namespace KnowledgeApp.LearningState.Service.Consumers
             {
                 await context.RespondAsync(new UserUpdatedResponse(
                     UserId: message.UserId,
-                    OldUserName: message.OldUserName,
-                    OldPassword: message.OldPassword,
-                    OldRole: message.OldRole,
                     IsSuccessful: false,
                     Message: "User not found."
                 ));

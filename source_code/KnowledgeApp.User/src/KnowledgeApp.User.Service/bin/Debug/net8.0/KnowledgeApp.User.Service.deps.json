@@ -10,7 +10,7 @@
         "dependencies": {
           "KnowledgeApp.Authentication.JwtAuthenticationManager": "1.0.3",
           "KnowledgeApp.Common": "1.0.3",
-          "KnowledgeApp.User.Contracts": "1.0.9",
+          "KnowledgeApp.User.Contracts": "1.1.1",
           "Microsoft.AspNetCore.Authentication.JwtBearer": "8.0.10",
           "Microsoft.AspNetCore.Authentication.OpenIdConnect": "8.0.0",
           "Polly": "8.4.2",
@@ -81,7 +81,7 @@
           }
         }
       },
-      "KnowledgeApp.User.Contracts/1.0.9": {
+      "KnowledgeApp.User.Contracts/1.1.1": {
         "runtime": {
           "lib/net8.0/KnowledgeApp.User.Contracts.dll": {
             "assemblyVersion": "1.0.2.0",
@@ -531,12 +531,12 @@
       "path": "knowledgeapp.common/1.0.3",
       "hashPath": "knowledgeapp.common.1.0.3.nupkg.sha512"
     },
-    "KnowledgeApp.User.Contracts/1.0.9": {
+    "KnowledgeApp.User.Contracts/1.1.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-RuWMy33MKQ0CWQMy1idY+aWu+ltakCKpc+iO4EhPhudQxcxnz7P0hAMUOuIbuPrFfS5l0ioPO57ZAKgKL4px8w==",
-      "path": "knowledgeapp.user.contracts/1.0.9",
-      "hashPath": "knowledgeapp.user.contracts.1.0.9.nupkg.sha512"
+      "sha512": "sha512-Nd4+4pwHtW/xWswuKi3MqCNEbms8HNpWxfMq4vO7uUzz6LYvTRiCc05zdi7LhRjYtd0S+zQaZ4E/bhHs7BdifQ==",
+      "path": "knowledgeapp.user.contracts/1.1.1",
+      "hashPath": "knowledgeapp.user.contracts.1.1.1.nupkg.sha512"
     },
     "MassTransit/8.2.5": {
       "type": "package",
