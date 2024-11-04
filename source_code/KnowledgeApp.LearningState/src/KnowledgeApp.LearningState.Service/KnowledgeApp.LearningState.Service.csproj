@@ -12,7 +12,7 @@
     <PackageReference Include="Microsoft.Extensions.Http.Polly" Version="8.0.10" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="KnowledgeApp.Paragraph.Contracts" Version="1.0.1-alpha" />
-    <PackageReference Include="KnowledgeApp.User.Contracts" Version="1.0.2" />
+    <PackageReference Include="KnowledgeApp.User.Contracts" Version="1.0.9" />
     <PackageReference Include="KnowledgeApp.Common" Version="1.0.3" />
   </ItemGroup>
 

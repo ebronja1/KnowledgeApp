@@ -67,6 +67,7 @@ namespace KnowledgeApp.User.Service.Controllers
         {
             var userModel = new UserModel
             {
+                Id = Guid.NewGuid(),
                 UserName = userCreateDto.UserName,
                 Password = userCreateDto.Password,
                 Role = userCreateDto.Role
@@ -90,13 +91,17 @@ namespace KnowledgeApp.User.Service.Controllers
                 return NotFound();
             }
 
+            var OldUserName = existingUser.UserName;
+            var OldPassword = existingUser.Password;
+            var OldRole = existingUser.Role;
+
             existingUser.UserName = userUpdateDto.UserName;
             existingUser.Password = userUpdateDto.Password;
             existingUser.Role = userUpdateDto.Role;
 
             await _usersRepository.UpdateAsync(existingUser);
 
-            await _publishEndpoint.Publish(new UserUpdated(existingUser.Id, existingUser.UserName));
+            await _publishEndpoint.Publish(new UserUpdated(existingUser.Id, existingUser.UserName, OldUserName, OldPassword, OldRole));
 
             return NoContent();
         }
@@ -111,8 +116,6 @@ namespace KnowledgeApp.User.Service.Controllers
             {
                 return NotFound();
             }
-
-            await _usersRepository.RemoveAsync(userModel.Id);
 
             await _publishEndpoint.Publish(new UserDeleted(id));
 

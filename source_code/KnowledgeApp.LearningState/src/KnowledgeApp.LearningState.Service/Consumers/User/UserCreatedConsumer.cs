@@ -18,21 +18,43 @@ namespace KnowledgeApp.LearningState.Service.Consumers
         public async Task Consume(ConsumeContext<UserCreated> context)
         {
             var message = context.Message;
-
-            var userModel = await _repository.GetAsync(message.Id);
+            var userModel = await _repository.GetAsync(message.UserId);
 
             if (userModel != null)
             {
+                await context.RespondAsync(new UserCreatedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: false,
+                    Message: "User already exists."
+                ));
                 return;
             }
 
-            userModel = new UserModel
+            try
             {
-                Id = message.Id,
-                UserName = message.UserName
-            };
+                userModel = new UserModel
+                {
+                    Id = message.UserId,
+                    UserName = message.UserName
+                };
 
-            await _repository.CreateAsync(userModel);
+                await _repository.CreateAsync(userModel);
+
+                await context.RespondAsync(new UserCreatedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: true,
+                    Message: "User created successfully."
+                ));
+            }
+            catch
+            {
+                await context.RespondAsync(new UserCreatedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: false,
+                    Message: "Failed to create user in LearningState service."
+                ));
+            }
         }
+
     }
 }

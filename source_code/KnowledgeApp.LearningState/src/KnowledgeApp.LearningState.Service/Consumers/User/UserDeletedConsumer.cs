@@ -21,26 +21,37 @@ namespace KnowledgeApp.LearningState.Service.Consumers
         public async Task Consume(ConsumeContext<UserDeleted> context)
         {
             var message = context.Message;
+            var userModel = await _repository.GetAsync(message.UserId);
 
-            _logger.LogInformation("Received UserDeleted event for User ID: {UserId}", message.Id);
-
-            var userModel = await _repository.GetAsync(message.Id);
             if (userModel == null)
             {
-                _logger.LogWarning("User with ID {UserId} not found.", message.Id);
+                await context.RespondAsync(new UserDeletedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: false,
+                    Message: "User not found."
+                ));
                 return;
             }
 
             try
             {
-                await _repository.RemoveAsync(message.Id);
-                _logger.LogInformation("Successfully removed User with ID: {UserId}", message.Id);
+                await _repository.RemoveAsync(userModel.Id);
+
+                await context.RespondAsync(new UserDeletedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: true,
+                    Message: "User deleted successfully."
+                ));
             }
-            catch (Exception ex)
+            catch
             {
-                _logger.LogError(ex, "Error occurred while removing User with ID: {UserId}", message.Id);
-                throw; // Rethrow the exception to allow MassTransit to handle retry policies
+                await context.RespondAsync(new UserDeletedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: false,
+                    Message: "Failed to delete user in LearningState service."
+                ));
             }
         }
+
     }
 }

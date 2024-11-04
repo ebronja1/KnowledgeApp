@@ -18,25 +18,41 @@ namespace KnowledgeApp.LearningState.Service.Consumers
         public async Task Consume(ConsumeContext<UserUpdated> context)
         {
             var message = context.Message;
-
-            var userModel = await _repository.GetAsync(message.Id);
+            var userModel = await _repository.GetAsync(message.UserId);
 
             if (userModel == null)
             {
-                userModel = new UserModel
-                {
-                    Id = message.Id,
-                    UserName = message.UserName
-                };
-
-                await _repository.CreateAsync(userModel);
+                await context.RespondAsync(new UserUpdatedResponse(
+                    UserId: message.UserId,
+                    OldUserName: message.OldUserName,
+                    OldPassword: message.OldPassword,
+                    OldRole: message.OldRole,
+                    IsSuccessful: false,
+                    Message: "User not found."
+                ));
+                return;
             }
-            else
-            {
-                userModel.UserName = message.UserName;
 
+            try
+            {
+                userModel.UserName = message.UpdatedUserName; // or other fields
                 await _repository.UpdateAsync(userModel);
+
+                await context.RespondAsync(new UserUpdatedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: true,
+                    Message: "User updated successfully."
+                ));
+            }
+            catch
+            {
+                await context.RespondAsync(new UserUpdatedResponse(
+                    UserId: message.UserId,
+                    IsSuccessful: false,
+                    Message: "Failed to update user in LearningState service."
+                ));
             }
         }
+
     }
 }

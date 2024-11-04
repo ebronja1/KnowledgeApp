@@ -4,14 +4,14 @@
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\KnowledgeApp.User.Contracts.csproj": {
-      "version": "1.0.2",
+    "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj": {
+      "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\KnowledgeApp.User.Contracts.csproj",
-        "projectName": "KnowledgeApp.User.Contracts",
-        "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\KnowledgeApp.User.Contracts.csproj",
+        "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
+        "projectName": "KnowledgeApp.User.Service",
+        "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
         "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\obj\\",
+        "outputPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\NuGet.Config",
@@ -47,73 +47,6 @@
       "frameworks": {
         "net8.0": {
           "targetAlias": "net8.0",
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48",
-            "net481"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300-preview.24203.14/PortableRuntimeIdentifierGraph.json"
-        }
-      }
-    },
-    "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj": {
-      "version": "1.0.0",
-      "restore": {
-        "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
-        "projectName": "KnowledgeApp.User.Service",
-        "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
-        "packagesPath": "C:\\Users\\Emir\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\obj\\",
-        "projectStyle": "PackageReference",
-        "configFilePaths": [
-          "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\NuGet.Config",
-          "C:\\Users\\Emir\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
-        ],
-        "originalTargetFrameworks": [
-          "net8.0"
-        ],
-        "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
-          "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\packages": {},
-          "https://api.nuget.org/v3/index.json": {}
-        },
-        "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
-            "projectReferences": {
-              "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\KnowledgeApp.User.Contracts.csproj": {
-                "projectPath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Contracts\\KnowledgeApp.User.Contracts.csproj"
-              }
-            }
-          }
-        },
-        "warningProperties": {
-          "warnAsError": [
-            "NU1605"
-          ]
-        },
-        "restoreAuditProperties": {
-          "enableAudit": "true",
-          "auditLevel": "low",
-          "auditMode": "direct"
-        }
-      },
-      "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
           "dependencies": {
             "KnowledgeApp.Authentication.JwtAuthenticationManager": {
               "target": "Package",
@@ -125,7 +58,7 @@
             },
             "KnowledgeApp.User.Contracts": {
               "target": "Package",
-              "version": "[1.0.2, )"
+              "version": "[1.0.9, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -134,6 +67,10 @@
             "Microsoft.AspNetCore.Authentication.OpenIdConnect": {
               "target": "Package",
               "version": "[8.0.0, )"
+            },
+            "Polly": {
+              "target": "Package",
+              "version": "[8.4.2, )"
             },
             "Swashbuckle.AspNetCore": {
               "target": "Package",

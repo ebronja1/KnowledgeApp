@@ -10,7 +10,7 @@
         "dependencies": {
           "KnowledgeApp.Common": "1.0.3",
           "KnowledgeApp.Paragraph.Contracts": "1.0.1-alpha",
-          "KnowledgeApp.User.Contracts": "1.0.2",
+          "KnowledgeApp.User.Contracts": "1.0.9",
           "Microsoft.AspNetCore.OpenApi": "8.0.2",
           "Microsoft.Extensions.Http.Polly": "8.0.10",
           "Swashbuckle.AspNetCore": "6.4.0"
@@ -73,11 +73,11 @@
           }
         }
       },
-      "KnowledgeApp.User.Contracts/1.0.2": {
+      "KnowledgeApp.User.Contracts/1.0.9": {
         "runtime": {
           "lib/net8.0/KnowledgeApp.User.Contracts.dll": {
-            "assemblyVersion": "1.0.0.0",
-            "fileVersion": "1.0.0.0"
+            "assemblyVersion": "1.0.2.0",
+            "fileVersion": "1.0.2.0"
           }
         }
       },
@@ -518,12 +518,12 @@
       "path": "knowledgeapp.paragraph.contracts/1.0.1-alpha",
       "hashPath": "knowledgeapp.paragraph.contracts.1.0.1-alpha.nupkg.sha512"
     },
-    "KnowledgeApp.User.Contracts/1.0.2": {
+    "KnowledgeApp.User.Contracts/1.0.9": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-jQmvR6aubmojqlS8gQsuaYxlsaW/KYrdk8+HlgyTm9Qk++Q3SqCcOBzq7Ii5KzBM1XUjW0qU5s4N1XJLTn+3zA==",
-      "path": "knowledgeapp.user.contracts/1.0.2",
-      "hashPath": "knowledgeapp.user.contracts.1.0.2.nupkg.sha512"
+      "sha512": "sha512-RuWMy33MKQ0CWQMy1idY+aWu+ltakCKpc+iO4EhPhudQxcxnz7P0hAMUOuIbuPrFfS5l0ioPO57ZAKgKL4px8w==",
+      "path": "knowledgeapp.user.contracts/1.0.9",
+      "hashPath": "knowledgeapp.user.contracts.1.0.9.nupkg.sha512"
     },
     "MassTransit/8.2.5": {
       "type": "package",

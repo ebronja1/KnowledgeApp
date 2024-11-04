@@ -45,7 +45,6 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeAp
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\runtimes\osx\native\libmongocrypt.dylib
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\runtimes\win\native\mongocrypt.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\KnowledgeApp.User.Contracts.dll
-C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\KnowledgeApp.User.Contracts.pdb
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\staticwebassets.build.json
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\staticwebassets\msbuild.KnowledgeApp.User.Service.Microsoft.AspNetCore.StaticWebAssets.props
@@ -62,3 +61,5 @@ C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeAp
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\obj\Debug\net8.0\ref\KnowledgeApp.User.Service.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\KnowledgeApp.Authentication.JwtAuthenticationManager.dll
 C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\Microsoft.Bcl.TimeProvider.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\Polly.dll
+C:\Users\Emir\Desktop\KnowledgeApp\source_code\KnowledgeApp.User\src\KnowledgeApp.User.Service\bin\Debug\net8.0\Polly.Core.dll

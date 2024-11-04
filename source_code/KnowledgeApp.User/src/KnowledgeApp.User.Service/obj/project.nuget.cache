@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "gQk75AKQkgM=",
+  "dgSpecHash": "ASZ53g/4Hn4=",
   "success": true,
   "projectFilePath": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.User\\src\\KnowledgeApp.User.Service\\KnowledgeApp.User.Service.csproj",
   "expectedPackageFiles": [
@@ -9,6 +9,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\dnsclient\\1.6.1\\dnsclient.1.6.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.authentication.jwtauthenticationmanager\\1.0.3\\knowledgeapp.authentication.jwtauthenticationmanager.1.0.3.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.common\\1.0.3\\knowledgeapp.common.1.0.3.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.0.9\\knowledgeapp.user.contracts.1.0.9.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit\\8.2.5\\masstransit.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.abstractions\\8.2.5\\masstransit.abstractions.8.2.5.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\masstransit.rabbitmq\\8.2.5\\masstransit.rabbitmq.8.2.5.nupkg.sha512",
@@ -42,6 +43,8 @@
     "C:\\Users\\Emir\\.nuget\\packages\\mongodb.driver\\2.19.0\\mongodb.driver.2.19.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\mongodb.driver.core\\2.19.0\\mongodb.driver.core.2.19.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\mongodb.libmongocrypt\\1.7.0\\mongodb.libmongocrypt.1.7.0.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\polly\\8.4.2\\polly.8.4.2.nupkg.sha512",
+    "C:\\Users\\Emir\\.nuget\\packages\\polly.core\\8.4.2\\polly.core.8.4.2.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\rabbitmq.client\\6.8.1\\rabbitmq.client.6.8.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\sharpcompress\\0.30.1\\sharpcompress.0.30.1.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\snappier\\1.0.0\\snappier.1.0.0.nupkg.sha512",
@@ -57,8 +60,7 @@
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
     "C:\\Users\\Emir\\.nuget\\packages\\system.threading.channels\\7.0.0\\system.threading.channels.7.0.0.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512",
-    "C:\\Users\\Emir\\.nuget\\packages\\knowledgeapp.user.contracts\\1.0.2\\knowledgeapp.user.contracts.1.0.2.nupkg.sha512"
+    "C:\\Users\\Emir\\.nuget\\packages\\zstdsharp.port\\0.6.2\\zstdsharp.port.0.6.2.nupkg.sha512"
   ],
   "logs": []
 }
