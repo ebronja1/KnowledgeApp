@@ -1,6 +1,6 @@
 version: "3.8"
 
-services: 
+services:
   mongo:
     image: mongo
     container_name: mongo
@@ -28,6 +28,14 @@ services:
       - redisdata:/data
     restart: always
 
+  jaeger:
+    image: jaegertracing/all-in-one:latest
+    container_name: jaeger
+    ports:
+      - 4317:4317  
+      - 4318:4318  
+      - 16686:16686 #UI  
+
   learning-state-service:
     build:
       context: .
@@ -37,11 +45,13 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - RABBITMQ_HOST=rabbitmq
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
-      - REDIS_CONNECTION_STRING=redis:6379  # Connection string for Redis
+      - REDIS_CONNECTION_STRING=redis:6379
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317  # OTLP gRPC endpoint for Jaeger
     depends_on:
       - mongo
       - rabbitmq
-      - redis  # Ensure Redis starts before the service
+      - redis
+      - jaeger
 
   paragraph-service:
     build:
@@ -52,11 +62,13 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - RABBITMQ_HOST=rabbitmq
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
-      - REDIS_CONNECTION_STRING=redis:6379  # Connection string for Redis
+      - REDIS_CONNECTION_STRING=redis:6379
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
     depends_on:
       - mongo
       - rabbitmq
-      - redis  # Ensure Redis starts before the service
+      - redis
+      - jaeger
 
   user-service:
     build:
@@ -67,11 +79,13 @@ services:
       - ASPNETCORE_ENVIRONMENT=Development
       - RABBITMQ_HOST=rabbitmq
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
-      - REDIS_CONNECTION_STRING=redis:6379  # Connection string for Redis
+      - REDIS_CONNECTION_STRING=redis:6379
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
     depends_on:
       - mongo
       - rabbitmq
-      - redis  # Ensure Redis starts before the service
+      - redis
+      - jaeger
 
   api-gateway:
     build:
@@ -82,12 +96,14 @@ services:
       - 5000:8080
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
     depends_on:
       - learning-state-service
       - paragraph-service
       - user-service
+      - jaeger
 
 volumes: 
   mongodbdata:
   rabbitmqdata:
-  redisdata:  # Volume for Redis data
+  redisdata:

@@ -3,7 +3,8 @@ using KnowledgeApp.Paragraph.Service.Models;
 using KnowledgeApp.Common.MassTransit;
 using KnowledgeApp.Common.MongoDB;
 using KnowledgeApp.Common.Settings;
-using KnowledgeApp.Common.Redis;  // Redis extension
+using KnowledgeApp.Common.Redis;
+using KnowledgeApp.Common.Telemetry;  // Redis extension
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -14,6 +15,7 @@ var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).
 builder.Services.AddMongo()
     .AddMongoRepository<ParagraphModel>("Paragraph")
     .AddMassTransitWithRabbitMq()
+    .AddOpenTelemetryTracing("Paragraph")
     .AddRedisCacheService();
     
 builder.Services.AddRedisCache();  // Use the Redis extension

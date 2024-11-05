@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Common library for KnowledgeApp.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d30fcce03c72b86523346f607be2d1343fd774bb")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b28591cf9e7946b454358575569b2a3b677ebb2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeApp.Common")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeApp.Common")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

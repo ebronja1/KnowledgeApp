@@ -13,7 +13,7 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
     <PackageReference Include="KnowledgeApp.Paragraph.Contracts" Version="1.0.1-alpha" />
     <PackageReference Include="KnowledgeApp.User.Contracts" Version="1.1.1" />
-    <PackageReference Include="KnowledgeApp.Common" Version="1.0.3" />
+    <PackageReference Include="KnowledgeApp.Common" Version="1.0.8" />
   </ItemGroup>
 
 </Project>

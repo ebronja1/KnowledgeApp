@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KnowledgeApp.LearningState.Service")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c27f20cd55260d96e2af8a1d46bea40cfa513033")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b28591cf9e7946b454358575569b2a3b677ebb2d")]
 [assembly: System.Reflection.AssemblyProductAttribute("KnowledgeApp.LearningState.Service")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KnowledgeApp.LearningState.Service")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
