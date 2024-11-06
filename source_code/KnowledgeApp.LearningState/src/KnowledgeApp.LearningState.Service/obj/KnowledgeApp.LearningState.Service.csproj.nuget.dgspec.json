@@ -50,7 +50,7 @@
           "dependencies": {
             "KnowledgeApp.Common": {
               "target": "Package",
-              "version": "[1.0.3, )"
+              "version": "[1.0.6, )"
             },
             "KnowledgeApp.Paragraph.Contracts": {
               "target": "Package",
@@ -58,7 +58,7 @@
             },
             "KnowledgeApp.User.Contracts": {
               "target": "Package",
-              "version": "[1.0.9, )"
+              "version": "[1.1.1, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",

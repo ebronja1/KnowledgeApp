@@ -48,9 +48,9 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "dependencies": {
-            "KnowledgeApp.Authentication.JwtAuthenticationManager": {
+            "KnowledgeApp.Common": {
               "target": "Package",
-              "version": "[1.0.4, )"
+              "version": "[1.0.8, )"
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",

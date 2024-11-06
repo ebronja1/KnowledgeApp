@@ -10,6 +10,7 @@ using KnowledgeApp.LearningState.Service.Clients;
 using KnowledgeApp.LearningState.Service.Models;
 using Polly;
 using Polly.Timeout;
+using KnowledgeApp.Common.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 var configuration = builder.Configuration;
@@ -19,7 +20,8 @@ builder.Services.AddMongo()
                 .AddMongoRepository<LearningStateModel>("learning-states")
                 .AddMongoRepository<ParagraphModel>("paragraphs")
                 .AddMongoRepository<UserModel>("users")
-                .AddMassTransitWithRabbitMq();
+                .AddMassTransitWithRabbitMq()
+                .AddOpenTelemetryTracing("learning-states");
 
 AddParagraphClient(builder.Services, configuration);
 

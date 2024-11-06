@@ -4,6 +4,7 @@ using KnowledgeApp.Common.MassTransit;
 using KnowledgeApp.Common.MongoDB;
 using KnowledgeApp.Common.Settings;
 using KnowledgeApp.Authentication.JwtAuthenticationManager;
+using KnowledgeApp.Common.Telemetry;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -13,7 +14,8 @@ var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).
 // Add services to the container.
 builder.Services.AddMongo()
     .AddMongoRepository<UserModel>("User")
-    .AddMassTransitWithRabbitMq();
+    .AddMassTransitWithRabbitMq()
+    .AddOpenTelemetryTracing("User");
 
 builder.Services.AddSingleton<JwtTokenHandler>();
 

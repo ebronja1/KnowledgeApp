@@ -7,6 +7,12 @@ WORKDIR /app
 # Copy csproj file and restore dependencies
 COPY ["source_code/KnowledgeApp.ApiGateway/src/KnowledgeApp.ApiGateway/*.csproj", "./"]
 
+# Copy NuGet.config from the root directory of the context
+COPY ["NuGet.config", "."]
+
+# Copy the NuGet packages from the root packages folder
+COPY ["packages", "packages/"]
+
 # Restore dependencies
 RUN dotnet restore
 
