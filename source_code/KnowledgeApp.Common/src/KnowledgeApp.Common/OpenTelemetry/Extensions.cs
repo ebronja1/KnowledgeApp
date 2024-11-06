@@ -26,7 +26,7 @@ namespace KnowledgeApp.Common.Telemetry
                     
                     tracing.AddOtlpExporter(o =>
                     {
-                        o.Endpoint = new Uri("http://jaeger:4317"); // Adjust based on your setup
+                        o.Endpoint = new Uri("http://jaeger:4317"); 
                     });
                 });
 
