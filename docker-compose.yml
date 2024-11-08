@@ -34,7 +34,30 @@ services:
     ports:
       - 4317:4317  
       - 4318:4318  
-      - 16686:16686 #UI  
+      - 16686:16686 # UI  
+
+  seq:
+    image: datalust/seq:latest
+    container_name: seq
+    restart: always
+    volumes:
+      - seq:/data
+    environment:
+      ACCEPT_EULA: "Y"
+    ports:
+      - 5341:80
+
+
+  mssql:
+    image: mcr.microsoft.com/mssql/server:2022-latest
+    container_name: mssql
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=MySecurePassword! 
+    ports:
+      - 1433:1433
+    volumes:
+      - mssqldata:/var/opt/mssql
 
   learning-state-service:
     build:
@@ -46,12 +69,15 @@ services:
       - RABBITMQ_HOST=rabbitmq
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
       - REDIS_CONNECTION_STRING=redis:6379
-      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317  # OTLP gRPC endpoint for Jaeger
+      - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
+      - MSSQL_CONNECTION_STRING=Server=mssql,1433;Database=LoggingDb;User Id=sa;Password=MySecurePassword!
     depends_on:
       - mongo
       - rabbitmq
       - redis
       - jaeger
+      - seq
+      - mssql
 
   paragraph-service:
     build:
@@ -64,11 +90,14 @@ services:
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
       - REDIS_CONNECTION_STRING=redis:6379
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
+      - MSSQL_CONNECTION_STRING=Server=mssql,1433;Database=LoggingDb;User Id=sa;Password=MySecurePassword!
     depends_on:
       - mongo
       - rabbitmq
       - redis
       - jaeger
+      - seq
+      - mssql
 
   user-service:
     build:
@@ -81,11 +110,14 @@ services:
       - MONGODB_CONNECTION_STRING=mongodb://mongo:27017
       - REDIS_CONNECTION_STRING=redis:6379
       - OTEL_EXPORTER_OTLP_ENDPOINT=http://jaeger:4317
+      - MSSQL_CONNECTION_STRING=Server=mssql,1433;Database=LoggingDb;User Id=sa;Password=MySecurePassword!
     depends_on:
       - mongo
       - rabbitmq
       - redis
       - jaeger
+      - seq
+      - mssql
 
   api-gateway:
     build:
@@ -107,3 +139,6 @@ volumes:
   mongodbdata:
   rabbitmqdata:
   redisdata:
+  mssqldata:
+  seq:
+
