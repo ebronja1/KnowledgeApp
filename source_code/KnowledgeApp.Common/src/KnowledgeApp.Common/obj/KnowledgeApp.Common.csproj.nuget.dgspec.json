@@ -5,7 +5,7 @@
   },
   "projects": {
     "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj": {
-      "version": "1.0.8",
+      "version": "1.1.3",
       "restore": {
         "projectUniqueName": "C:\\Users\\Emir\\Desktop\\KnowledgeApp\\source_code\\KnowledgeApp.Common\\src\\KnowledgeApp.Common\\KnowledgeApp.Common.csproj",
         "projectName": "KnowledgeApp.Common",
@@ -107,6 +107,22 @@
             "OpenTelemetry.Instrumentation.StackExchangeRedis": {
               "target": "Package",
               "version": "[1.9.0-beta.1, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[8.0.3, )"
+            },
+            "Serilog.Sinks.File": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Serilog.Sinks.MSSqlServer": {
+              "target": "Package",
+              "version": "[8.0.0, )"
+            },
+            "Serilog.Sinks.Seq": {
+              "target": "Package",
+              "version": "[8.0.0, )"
             },
             "StackExchange.Redis": {
               "target": "Package",

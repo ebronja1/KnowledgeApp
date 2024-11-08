@@ -4,65 +4,84 @@ using KnowledgeApp.Common.MassTransit;
 using KnowledgeApp.Common.MongoDB;
 using KnowledgeApp.Common.Settings;
 using KnowledgeApp.Common.Redis;
-using KnowledgeApp.Common.Telemetry;  // Redis extension
+using KnowledgeApp.Common.Telemetry;
+using Serilog;  // Redis extension;
+using KnowledgeApp.Common.Logging;  // Redis extension;
 
-var builder = WebApplication.CreateBuilder(args);
-
-// Load configuration settings
-var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
-
-// Add services to the container.
-builder.Services.AddMongo()
-    .AddMongoRepository<ParagraphModel>("Paragraph")
-    .AddMassTransitWithRabbitMq()
-    .AddOpenTelemetryTracing("Paragraph")
-    .AddRedisCacheService();
-    
-builder.Services.AddRedisCache();  // Use the Redis extension
-
-builder.Services.AddControllers(options =>
+Log.Logger = new LoggerConfiguration()
+    .WriteTo.Console()
+    .CreateLogger();
+try
 {
-    options.SuppressAsyncSuffixInActionNames = false;
-});
+    var builder = WebApplication.CreateBuilder(args);
 
-// Add Swagger/OpenAPI
-builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>
-{
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "KnowledgeApp.Paragraph.Service", Version = "v1" });
-});
+    // Load configuration settings
+    var serviceSettings = builder.Configuration.GetSection(nameof(ServiceSettings)).Get<ServiceSettings>();
 
-// Configure CORS
-var allowedOrigin = builder.Configuration["AllowedOrigin"];
+    // Add services to the container.
+    builder.Services.AddMongo()
+        .AddMongoRepository<ParagraphModel>("Paragraph")
+        .AddMassTransitWithRabbitMq()
+        .AddOpenTelemetryTracing("Paragraph")
+        .AddRedisCacheService();
+        
+    builder.Services.AddRedisCache();  // Use the Redis extension
 
-builder.Services.AddCors(options =>
-{
-    options.AddDefaultPolicy(policyBuilder =>
+    builder.Services.AddControllers(options =>
     {
-        policyBuilder.WithOrigins(allowedOrigin)
-            .AllowAnyHeader()
-            .AllowAnyMethod();
+        options.SuppressAsyncSuffixInActionNames = false;
     });
-});
 
-var app = builder.Build();
+    // Add Swagger/OpenAPI
+    builder.Services.AddEndpointsApiExplorer();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.UseDeveloperExceptionPage();
-    app.UseSwagger();
-    app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KnowledgeApp.Paragraph.Service v1"));
+    builder.Host.UseSerilogLogging();
+    
+    builder.Services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "KnowledgeApp.Paragraph.Service", Version = "v1" });
+    });
+
+    // Configure CORS
+    var allowedOrigin = builder.Configuration["AllowedOrigin"];
+
+    builder.Services.AddCors(options =>
+    {
+        options.AddDefaultPolicy(policyBuilder =>
+        {
+            policyBuilder.WithOrigins(allowedOrigin)
+                .AllowAnyHeader()
+                .AllowAnyMethod();
+        });
+    });
+
+    var app = builder.Build();
+
+    // Configure the HTTP request pipeline.
+    if (app.Environment.IsDevelopment())
+    {
+        app.UseDeveloperExceptionPage();
+        app.UseSwagger();
+        app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "KnowledgeApp.Paragraph.Service v1"));
+    }
+
+    // Enable CORS
+    app.UseCors();
+
+    // Use HTTPS redirection and routing
+    app.UseHttpsRedirection();
+
+    app.UseAuthorization();
+
+    app.MapControllers();
+
+    app.Run();
 }
-
-// Enable CORS
-app.UseCors();
-
-// Use HTTPS redirection and routing
-app.UseHttpsRedirection();
-
-app.UseAuthorization();
-
-app.MapControllers();
-
-app.Run();
+catch (Exception ex)
+{
+    Log.Fatal(ex, "Host terminated unexpectedly");
+}
+finally
+{
+    Log.CloseAndFlush();
+}
